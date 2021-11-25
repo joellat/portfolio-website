@@ -1,0 +1,344 @@
+$orange-color: #cf5c36;
+$pink-color: #ed9298;
+$yellow-color: #e1c141;
+$bone-color: #f9f6ee;
+$offwhite-color: #faf9f6;
+$white-color: #ffffff;
+$grey-color: #333333;
+
+// font-family: 'Bebas Neue', cursive;
+// font-family: 'Inconsolata', monospace;
+// font-family: 'Noto Serif', serif;
+// font-family: 'Poppins', sans-serif;
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: $bone-color;
+  font-family: "Poppins", sans-serif;
+  color: $bone-color;
+}
+#headDiv {
+  position: relative;
+}
+#headImageClass {
+  width: 100vw;
+  display: block;
+}
+#introductionVideo {
+  display: block;
+  overflow: hidden;
+  width: 100vw;
+  margin-top: -11vh;
+  position: absolute;
+}
+#introductionLine {
+  background-color: $pink-color;
+  height: 50vh;
+  // font-family: "Noto Serif", serif;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  padding: 3vw;
+  box-sizing: border-box;
+  justify-content: space-between;
+  padding-right: 13vw;
+  p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.introductionButton {
+  border-style: solid;
+  border-color: $bone-color;
+  border-width: 2px;
+  padding: 15px;
+  border-radius: 30px;
+  margin: 8px;
+  text-align: center;
+}
+.introductionButton:hover {
+  color: $orange-color;
+  border-color: $orange-color;
+}
+#jesusIDopen {
+  background-color: $bone-color;
+  display: none;
+  color: $orange-color;
+  width: 20vw;
+}
+.stickyLogo {
+  width: 10vw;
+  border-radius: 0 0 30px 30px;
+  position: sticky;
+  left: 85vw;
+  top: 0px;
+  justify-self: flex-start;
+  align-self: flex-start;
+}
+
+// TEST
+#testWriting {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5vw;
+}
+.testWritingItem {
+  background-color: $bone-color;
+  border-style: solid;
+  border-color: $pink-color;
+  border-radius: 50%;
+  border-width: 2px;
+  color: $pink-color;
+  font-size: 2em;
+  font-weight: 700;
+  width: 17vw;
+  height: 17vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.testWritingItem:hover {
+  // transition: 1s;
+  // box-shadow: 0px 0px 30px 5px rgba($grey-color, 0.2);
+  // border-style: none;
+  // transition: 0.5s;
+  color: $orange-color;
+  border-color: $orange-color;
+}
+h1 {
+  color: $grey-color;
+  margin-top: 0px;
+  margin-left: 6vw;
+  font-size: 3.5vw;
+  position: relative;
+  margin-bottom: 5vw;
+}
+.vid {
+  width: 30vw;
+  margin-left: 5px;
+  margin: auto;
+  position: absolute;
+  bottom: 0px;
+}
+//STYLE OF CASE CONTAINERS --------------------------------------------------------------------------------
+.homeFlexContainer2 {
+  width: 100vw;
+}
+.caseContainer {
+  opacity: 0%;
+  border-radius: 50%;
+  width: 30vw;
+  height: 30vw;
+  background-color: $orange-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 5vw;
+  margin: auto;
+  margin-top: 5vw;
+  color: $bone-color;
+  .caseContainerArrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0%;
+    height: 0vw;
+    p {
+      text-align: center;
+      color: $pink-color;
+      margin: 0px;
+    }
+  }
+}
+// .caseContainerVisible {
+//   transition: 1s;
+//   opacity: 100%;
+// }
+.caseContainer:hover {
+  // transition: 0.5s;
+  color: $orange-color;
+  border-color: $orange-color;
+  // box-shadow: 0px 0px 30px 5px rgba($grey-color, 0.2);
+  // background-color: $bone-color;
+  cursor: pointer;
+  // .caseContainerTitle {
+  // transition: 0.5s;
+  // opacity: 100%;
+  // color: $orange-color;
+  // }
+}
+.caseContainerClicked {
+  transition: 0.5s;
+  // border-radius: 0%;
+  // box-shadow: 0px 0px 30px 5px rgba($grey-color, 0.2);
+  background-color: $pink-color;
+  color: $bone-color;
+  cursor: pointer;
+  border: none;
+  .caseContainerTitle {
+    transition: 0.5s;
+    opacity: 100%;
+    color: $orange-color;
+  }
+  .caseContainerArrow {
+    transition: 2s;
+    opacity: 100%;
+    height: 10vw;
+  }
+  .arrowImage {
+    height: 10vw;
+  }
+}
+.caseContainerClicked:hover {
+  color: $bone-color;
+}
+
+//ARTICLE VISIBILITY --------------------------------------------------------------------------------------
+.caseArticle {
+  display: none;
+  width: 100vw;
+  margin: auto;
+  h1 {
+    color: $white-color;
+    margin: 0px;
+    margin: auto;
+    font-size: 15vw;
+    text-align: center;
+    width: 80vw;
+  }
+}
+.caseArticleOpen {
+  display: block;
+}
+.description {
+  float: left;
+  background-color: $grey-color;
+  color: $bone-color;
+  padding: 2vw;
+  margin: 4vw;
+  margin-left: 0px;
+  border-radius: 0px 30px 30px 0px;
+  width: 20vw;
+  margin-right: 80vw;
+}
+// CASE ONE ARTICLE ---------------------------------------------------------------------------------------
+.articleRow {
+  box-sizing: border-box;
+  margin-bottom: 10vw;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  color: $grey-color;
+  font-size: 1.3vw;
+  font-family: "Noto Serif", serif;
+  width: 60vw;
+  margin: 10vw auto;
+  img {
+    width: 60vw;
+  }
+}
+.articleRowThree > img {
+  justify-self: center;
+  width: 30vw;
+}
+.articleRowFive {
+  background-color: $white-color;
+  padding: 5vw;
+  img {
+    width: 50vw;
+  }
+}
+// CASE TWO ARTICLE ---------------------------------------------------------------------------------------
+#caseTwoIDArticle {
+  .articleRow2 {
+    width: 80vw;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10vw;
+    img {
+      width: 19vw;
+    }
+    video {
+      height: 70vh;
+    }
+  }
+  .bigbigContainer {
+    align-items: center;
+  }
+  .bigContainer {
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+    img {
+      width: 50vw;
+    }
+  }
+  .iconFlex {
+    margin-left: 4vw;
+    img {
+      width: 15%;
+    }
+  }
+  .articleRow2One {
+    justify-content: center;
+    margin-bottom: 5vw;
+    img {
+      width: 60vw;
+    }
+  }
+  .articleRow2Two {
+    img {
+      width: 10vw;
+    }
+  }
+  .articleRow2Four {
+    justify-content: center;
+    video {
+      height: 60vw;
+    }
+  }
+}
+#caseThreeIDArticle {
+  .articleRow {
+    justify-content: center;
+    video {
+      justify-self: center;
+      align-self: center;
+      width: 40vw;
+    }
+  }
+}
+#caseFourIDArticle {
+  // width: 100vw;
+  .articleRow {
+    width: 80vw;
+    video {
+      // width: 100vw;
+      width: 80vw;
+    }
+  }
+}
+.classCaseFive {
+  height: 90vh;
+}
+//FOOTER --------------------------------------------------------------------------------------------------
+#footer1 {
+  background-color: $grey-color;
+  height: 30vh;
+  margin-top: 10vh;
+}
+
+#footer2 {
+  background-color: $orange-color;
+  width: 100vw;
+  margin: 0px;
+  text-align: center;
+  padding: 6px 0px;
+  p {
+    margin: 0px;
+  }
+}
