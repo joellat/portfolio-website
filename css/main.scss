@@ -48,24 +48,114 @@ body {
   }
 }
 .introductionButton {
+  padding: 15px;
+  margin: 8px;
+  text-align: center;
+  color: $bone-color;
   border-style: solid;
   border-color: $bone-color;
   border-width: 2px;
-  padding: 15px;
   border-radius: 30px;
-  margin: 8px;
-  text-align: center;
 }
 .introductionButton:hover {
   color: $orange-color;
   border-color: $orange-color;
+  cursor: pointer;
 }
-#jesusIDopen {
-  background-color: $bone-color;
-  display: none;
+.introClickedClass {
+  border-color: $orange-color;
   color: $orange-color;
-  width: 20vw;
 }
+.introductionClosed {
+  border: none;
+  background-color: $bone-color;
+  color: $grey-color;
+  border-radius: 30px;
+  width: 21vw;
+  padding: 2vw;
+  box-sizing: border-box;
+  text-align: center;
+  display: none;
+}
+.introOpenClass {
+  display: block;
+}
+// .introductionButtonInvisible {
+//   display: none;
+//   // padding: 15px;
+//   // margin: 8px;
+//   // text-align: center;
+//   // color: $bone-color;
+//   // border-style: solid;
+//   // border-color: $bone-color;
+//   // border-width: 2px;
+//   // border-radius: 30px;
+// }
+// .introductionButtonClicked {
+//   transition: 1s;
+//   background-color: $bone-color;
+//   display: block;
+//   float: right;
+//   color: $grey-color;
+//   width: 20vw;
+//   box-sizing: border-box;
+//   padding: 2vw;
+// }
+// // #jesusIDopen {
+// //   transition: 1s;
+// //   background-color: $bone-color;
+// //   display: none;
+// //   float: right;
+// //   color: $grey-color;
+// //   width: 20vw;
+// //   box-sizing: border-box;
+// //   padding: 2vw;
+// // }
+// #nationalityIDopen {
+//   transition: 1s;
+//   background-color: $bone-color;
+//   display: none;
+//   float: right;
+//   color: $grey-color;
+//   width: 20vw;
+//   box-sizing: border-box;
+//   padding: 2vw;
+//   margin: 2vw 0px;
+// }
+// #contactIDopen {
+//   transition: 1s;
+//   background-color: $bone-color;
+//   display: none;
+//   float: right;
+//   color: $grey-color;
+//   width: 20vw;
+//   box-sizing: border-box;
+//   padding: 1vw;
+//   line-height: 2em;
+//   margin: 5vw 0px;
+// }
+// #lingoIDopen {
+//   transition: 1s;
+//   background-color: $bone-color;
+//   display: none;
+//   float: right;
+//   color: $grey-color;
+//   width: 20vw;
+//   box-sizing: border-box;
+//   padding: 2vw;
+//   margin: 2vw 0px;
+// }
+// #mindIDopen {
+//   transition: 1s;
+//   background-color: $bone-color;
+//   display: none;
+//   float: right;
+//   color: $grey-color;
+//   width: 20vw;
+//   box-sizing: border-box;
+//   padding: 2vw;
+//   margin: 1.5vw 0px;
+// }
 .stickyLogo {
   width: 10vw;
   border-radius: 0 0 30px 30px;
@@ -74,6 +164,7 @@ body {
   top: 0px;
   justify-self: flex-start;
   align-self: flex-start;
+  z-index: 10;
 }
 
 // TEST
@@ -172,7 +263,7 @@ h1 {
   transition: 0.5s;
   // border-radius: 0%;
   // box-shadow: 0px 0px 30px 5px rgba($grey-color, 0.2);
-  background-color: $pink-color;
+  background-color: $orange-color;
   color: $bone-color;
   cursor: pointer;
   border: none;
@@ -200,26 +291,34 @@ h1 {
   width: 100vw;
   margin: auto;
   h1 {
-    color: $white-color;
-    margin: 0px;
+    // background-color: $bone-color;
+    color: $grey-color;
+    padding-top: 5vw;
+    // padding-bottom: 5vw;
     margin: auto;
     font-size: 15vw;
     text-align: center;
-    width: 80vw;
+    width: 100vw;
   }
 }
 .caseArticleOpen {
   display: block;
+}
+.descriptionContainer {
+  background-color: $pink-color;
 }
 .description {
   float: left;
   background-color: $grey-color;
   color: $bone-color;
   padding: 2vw;
-  margin: 4vw;
-  margin-left: 0px;
+  padding-right: 3vw;
+  margin: 0px;
+  // margin-top: 2vw;
+  margin-bottom: 5vw;
   border-radius: 0px 30px 30px 0px;
-  width: 20vw;
+  box-sizing: border-box;
+  width: 35vw;
   margin-right: 80vw;
 }
 // CASE ONE ARTICLE ---------------------------------------------------------------------------------------

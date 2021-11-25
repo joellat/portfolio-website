@@ -53,25 +53,42 @@ body {
 }
 
 .introductionButton {
+  padding: 15px;
+  margin: 8px;
+  text-align: center;
+  color: #f9f6ee;
   border-style: solid;
   border-color: #f9f6ee;
   border-width: 2px;
-  padding: 15px;
   border-radius: 30px;
-  margin: 8px;
-  text-align: center;
 }
 
 .introductionButton:hover {
   color: #cf5c36;
   border-color: #cf5c36;
+  cursor: pointer;
 }
 
-#jesusIDopen {
-  background-color: #f9f6ee;
-  display: none;
+.introClickedClass {
+  border-color: #cf5c36;
   color: #cf5c36;
-  width: 20vw;
+}
+
+.introductionClosed {
+  border: none;
+  background-color: #f9f6ee;
+  color: #333333;
+  border-radius: 30px;
+  width: 21vw;
+  padding: 2vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  display: none;
+}
+
+.introOpenClass {
+  display: block;
 }
 
 .stickyLogo {
@@ -84,6 +101,7 @@ body {
   justify-self: flex-start;
   -ms-flex-item-align: start;
       align-self: flex-start;
+  z-index: 10;
 }
 
 #testWriting {
@@ -198,7 +216,7 @@ h1 {
 .caseContainerClicked {
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-color: #ed9298;
+  background-color: #cf5c36;
   color: #f9f6ee;
   cursor: pointer;
   border: none;
@@ -233,16 +251,20 @@ h1 {
 }
 
 .caseArticle h1 {
-  color: #ffffff;
-  margin: 0px;
+  color: #333333;
+  padding-top: 5vw;
   margin: auto;
   font-size: 15vw;
   text-align: center;
-  width: 80vw;
+  width: 100vw;
 }
 
 .caseArticleOpen {
   display: block;
+}
+
+.descriptionContainer {
+  background-color: #ed9298;
 }
 
 .description {
@@ -250,10 +272,13 @@ h1 {
   background-color: #333333;
   color: #f9f6ee;
   padding: 2vw;
-  margin: 4vw;
-  margin-left: 0px;
+  padding-right: 3vw;
+  margin: 0px;
+  margin-bottom: 5vw;
   border-radius: 0px 30px 30px 0px;
-  width: 20vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 35vw;
   margin-right: 80vw;
 }
 

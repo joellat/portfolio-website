@@ -1,21 +1,24 @@
+let orangeColor = "#cf5c36";
+let pinkColor = "#ed9298";
+let boneColor = "#f9f6ee";
+let whiteColor = "#ffffff";
+let greyColor = "#333333";
+
 let caseOneContainer = document.getElementById("caseOneID");
 let caseTwoContainer = document.getElementById("caseTwoID");
 let caseThreeContainer = document.getElementById("caseThreeID");
 let caseFourContainer = document.getElementById("caseFourID");
-let caseFiveContainer = document.getElementById("caseFiveID");
 
 let caseOneArticle = document.getElementById("caseOneIDArticle");
 let caseTwoArticle = document.getElementById("caseTwoIDArticle");
 let caseThreeArticle = document.getElementById("caseThreeIDArticle");
 let caseFourArticle = document.getElementById("caseFourIDArticle");
-let caseFiveArticle = document.getElementById("caseFiveIDArticle");
 
 let caseContainerArray = [
   caseOneContainer,
   caseTwoContainer,
   caseThreeContainer,
   caseFourContainer,
-  caseFiveContainer,
 ];
 
 let caseArticleArray = [
@@ -23,7 +26,27 @@ let caseArticleArray = [
   caseTwoArticle,
   caseThreeArticle,
   caseFourArticle,
-  caseFiveArticle,
+];
+
+let jesusID = document.getElementById("jesusID");
+let mindID = document.getElementById("mindID");
+let nationalityID = document.getElementById("nationalityID");
+let lingoID = document.getElementById("lingoID");
+let contactID = document.getElementById("contactID");
+
+let jesusIDopen = document.getElementById("jesusIDopen");
+let mindIDopen = document.getElementById("mindIDopen");
+let nationalityIDopen = document.getElementById("nationalityIDopen");
+let lingoIDopen = document.getElementById("lingoIDopen");
+let contactIDopen = document.getElementById("contactIDopen");
+
+let introductionArray = [jesusID, mindID, nationalityID, lingoID, contactID];
+let introOpenArray = [
+  jesusIDopen,
+  mindIDopen,
+  nationalityIDopen,
+  lingoIDopen,
+  contactIDopen,
 ];
 
 function reply_click(clicked_id) {
@@ -51,14 +74,82 @@ function reply_click(clicked_id) {
     currentCaseArticle.classList.add("caseArticleOpen");
   }
 }
-
 function button_click(intro_id) {
-  let buttonElement = document.getElementById(intro_id);
-  buttonElement.style.color = "$orange-color";
-  buttonElement.style.borderColor = "$orange-color";
-  let buttonElementOpen = document.getElementById(intro_id + "open");
-  buttonElementOpen.style.display = "block";
+  let currentlyClicked = document.getElementById(intro_id);
+  let currentlyOpen = document.getElementById(intro_id + "open");
+  if (currentlyClicked.classList.contains("introClickedClass")) {
+    currentlyClicked.classList.remove("introClickedClass");
+    currentlyOpen.classList.remove("introOpenClass");
+  } else {
+    for (let i = 0; i < 5; i++) {
+      if (introductionArray[i].classList.contains("introClickedClass")) {
+        introductionArray[i].classList.remove("introClickedClass");
+      } else {
+        continue;
+      }
+    }
+    for (let i = 0; i < 5; i++) {
+      if (introOpenArray[i].classList.contains("introOpenClass")) {
+        introOpenArray[i].classList.remove("introOpenClass");
+      } else {
+        continue;
+      }
+    }
+    currentlyClicked.classList.add("introClickedClass");
+    currentlyOpen.classList.add("introOpenClass");
+  }
 }
+
+// function button_click(intro_id) {
+//   if (
+//     document
+//       .getElementById(intro_id)
+//       .classList.contains("introductionButtonClicked")
+//   ) {
+//     document
+//       .getElementById(intro_id)
+//       .classList.remove("introductionButtonClicked");
+//     document.getElementById("introductionLine").style.paddingRight = "13vw";
+//     let buttonElementOpen = document.getElementById(intro_id + "open");
+//     buttonElementOpen.style.display = "none";
+//     document.getElementById(intro_id).style.borderColor = boneColor;
+//     document.getElementById(intro_id).style.color = boneColor;
+//     // document.getElementById(intro_id).hover.style.color = orangeColor;
+//     // document.getElementById(intro_id).hover.style.borderColor = orangeColor;
+//   } else {
+//     // for (i = 0; i < 5; i++) {
+//     //   if (
+//     //     introductionArray[i].classList.contains("introductionButtonClicked")
+//     //   ) {
+//     //     introductionArray[i].classList.remove("introductionButtonClicked");
+//     //     console.log(introductionArray[i].id);
+//     //     let buttonElementOpen = introductionArray[i].id + "open";
+//     //     buttonElementOpen.style.display = "none";
+//     //     document.getElementById(introductionArray[i].id).style.borderColor =
+//     //       boneColor;
+//     //     document.getElementById(introductionArray[i].id).style.color =
+//     //       boneColor;
+//     //   } else {
+//     //     continue;
+//     //   }
+//     // }
+//     for (i = 0; i < 5; i++) {
+//       if (
+//         introductionArray[i].classList.contains("introductionButtonClicked")
+//       ) {
+//       }
+//     }
+//     let buttonElementOpen = document.getElementById(intro_id + "open");
+//     console.log(buttonElementOpen);
+//     document.getElementById("introductionLine").style.paddingRight = "8vw";
+//     document
+//       .getElementById(intro_id)
+//       .classList.add("introductionButtonClicked");
+//     buttonElementOpen.style.display = "block";
+//     document.getElementById(intro_id).style.borderColor = orangeColor;
+//     document.getElementById(intro_id).style.color = orangeColor;
+//   }
+// }
 
 function pauseVideo() {
   if (
