@@ -56,14 +56,14 @@ function reply_click(clicked_id) {
     currentCaseContainer.classList.remove("caseContainerClicked");
     currentCaseArticle.classList.remove("caseArticleOpen");
   } else {
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 3; i++) {
       if (caseContainerArray[i].classList.contains("caseContainerClicked")) {
         caseContainerArray[i].classList.remove("caseContainerClicked");
       } else {
         continue;
       }
     }
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 3; i++) {
       if (caseArticleArray[i].classList.contains("caseArticleOpen")) {
         caseArticleArray[i].classList.remove("caseArticleOpen");
       } else {

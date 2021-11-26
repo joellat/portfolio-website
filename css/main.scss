@@ -10,6 +10,10 @@ $grey-color: #333333;
 // font-family: 'Inconsolata', monospace;
 // font-family: 'Noto Serif', serif;
 // font-family: 'Poppins', sans-serif;
+a {
+  text-decoration: none;
+  color: $grey-color;
+}
 body {
   margin: 0px;
   padding: 0px;
@@ -31,21 +35,26 @@ body {
   margin-top: -11vh;
   position: absolute;
 }
+// #introductionLineContainer {
+// }
 #introductionLine {
-  background-color: $pink-color;
-  height: 50vh;
-  // font-family: "Noto Serif", serif;
   font-family: "Poppins", sans-serif;
   display: flex;
   padding: 3vw;
+  padding-right: 0px;
+  background-color: $pink-color;
+  height: 50vh;
   box-sizing: border-box;
   justify-content: space-between;
-  padding-right: 13vw;
+  // padding-right: 25vw;
   p {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
+  background-color: $pink-color;
+  height: 50vh;
+  position: relative;
 }
 .introductionButton {
   padding: 15px;
@@ -66,19 +75,30 @@ body {
   border-color: $orange-color;
   color: $orange-color;
 }
+#fourthColumnIntro {
+  width: 25vw;
+}
 .introductionClosed {
   border: none;
-  background-color: $bone-color;
-  color: $grey-color;
-  border-radius: 30px;
-  width: 21vw;
-  padding: 2vw;
   box-sizing: border-box;
-  text-align: center;
+  background-color: $grey-color;
+  color: $bone-color;
+  border-radius: 30px 0px 0px 30px;
+  width: 25vw;
+  padding: 2vw;
+  text-align: left;
+  margin: 0px;
   display: none;
+  float: right;
+  // position: absolute;
+  // top: 4vh;
+  // right: 0px;
 }
 .introOpenClass {
   display: block;
+}
+#contactIDopen > span {
+  font-weight: 600;
 }
 // .introductionButtonInvisible {
 //   display: none;
@@ -321,6 +341,17 @@ h1 {
   width: 35vw;
   margin-right: 80vw;
 }
+.scrollUpContainer {
+  width: 30vw;
+  text-align: center;
+  margin: auto;
+}
+.scrollUp {
+  color: $grey-color;
+  font-weight: 700;
+  font-size: 2vw;
+  margin: 0px;
+}
 // CASE ONE ARTICLE ---------------------------------------------------------------------------------------
 .articleRow {
   box-sizing: border-box;
@@ -419,6 +450,17 @@ h1 {
       // width: 100vw;
       width: 80vw;
     }
+    img {
+      width: 25vw;
+    }
+  }
+  .articleRowFour {
+    display: flex;
+    justify-content: space-between;
+    // flex-direction: row;
+    div {
+      width: 25vw;
+    }
   }
 }
 .classCaseFive {
@@ -427,12 +469,61 @@ h1 {
 //FOOTER --------------------------------------------------------------------------------------------------
 #footer1 {
   background-color: $grey-color;
-  height: 30vh;
-  margin-top: 10vh;
+  margin-top: 5vw;
+  padding: 2vw;
+  color: $bone-color;
+  #contactFormParagraph {
+    font-size: 2vw;
+    text-align: center;
+    font-weight: 600;
+    margin: 0px;
+    margin-top: 3vw;
+  }
+  #contactFormParagraph2 {
+    font-size: 1vw;
+    text-align: center;
+    font-weight: 100;
+    width: 15vw;
+    margin: auto;
+    margin-bottom: 3vw;
+  }
+  form {
+    text-align: center;
+    margin-bottom: 2vw;
+    input,
+    textarea {
+      display: block;
+      margin: auto;
+      border-radius: 30px;
+      border: none;
+      border-style: solid;
+      border-color: $bone-color;
+      border-width: 2px;
+      background-color: $bone-color;
+      color: $grey-color;
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      margin-top: 1vw;
+      padding: 1vw;
+      width: 25vw;
+    }
+    #submit {
+      width: 10vw;
+    }
+    #submit:hover {
+      color: $orange-color;
+    }
+    input:focus,
+    textarea:focus {
+      border-style: solid;
+      border-color: $orange-color;
+      border-width: 2px;
+    }
+  }
 }
 
 #footer2 {
-  background-color: $orange-color;
+  background-color: $pink-color;
   width: 100vw;
   margin: 0px;
   text-align: center;

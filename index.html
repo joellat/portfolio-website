@@ -33,10 +33,9 @@
         alt=""
       />
     </div>
-    <!-- <img class="stickyLogo" src="img/Logo 03 Artboard 2 Copy.jpg" alt="" /> -->
     <main>
       <!-- VIDEO --------------------------------------------------------------------------------->
-      <div id="introductionLine">
+        <div id="introductionLine">
         <img src="img/introductionFont.png" alt="" />
         <p>
           <span
@@ -66,33 +65,34 @@
             >Swedish, German, English</span
           >
         </p>
-        <p>
+        <p> <a href="#footer1">
           <span
             class="introductionButton"
             id="contactID"
             onclick="button_click(this.id)"
             >Contact</span
-          >
+          ></a> 
         </p>
+        <p id="fourthColumnIntro">
         <span class="introductionClosed" id="jesusIDopen"
           >My faith plays the biggest role in my life. It is the basis of my
           identity and affects the way I think and work. That includes love for
-          people and family, but also passion and efficiency in completing
-          tasks.</span
+          people, but also passion and efficiency at work.</span
         >
         <span class="introductionClosed" id="nationalityIDopen"
           >I am half swedish and half german. My swedish side has formed me into a very open person, while my german side has made me direct and honest.</span
         >
         <span class="introductionClosed" id="contactIDopen"
-          >Reach out to me via: <br>Mail: joella-andersson@web.de <br>Tel: 0049763986887</span
+          >Reach out to me via mail: <br> <span> joella-andersson@web.de</span> </span
         >
         <span class="introductionClosed" id="lingoIDopen"
           >I speak swedish, german and english fluently. My whole program in university is conducted in english and I am currently working on a swedish website for a client.</span
         >
         <span class="introductionClosed" id="mindIDopen"
           >I have always liked logical things and working with my hands on creative projects. Therefore I enjoy thinking in new ways, while involving my ingenuity at the same time.</span
-        >
-      </div>
+        ></p>
+      </div
+      >
       <!-- INTRODUCTION CODE ------------------------------------------------------------------------------>
       <img
         class="stickyLogo"
@@ -162,6 +162,7 @@
         <div class="articleRow">
           <img src="img/Ppnewnew 01 Artboard 1.jpg" alt="Portfolio-Pitch" />
         </div>
+        <div class="scrollUpContainer"><a href="#testWriting"><p class="scrollUp">Scroll Up</p></a></div>
       </div>
       <!-- CASE TWO ARTICLE ------------------------------------------------------------------------------>
       <div class="caseArticle" id="caseTwoIDArticle">
@@ -189,6 +190,7 @@
           <img class="wireframe" src="img/case_2_page_3.png" alt="Page 3" />
           <img class="wireframe" src="img/case_2_page_4.png" alt="Page 4" />
         </div>
+        <div class="scrollUpContainer"><a href="#testWriting"><p class="scrollUp">Scroll Up</p></a></div>
       </div>
       <!-- CASE THREE ARTICLE ---------------------------------------------------------------------------->
       <div class="caseArticle" id="caseThreeIDArticle">
@@ -205,6 +207,7 @@
             loading="lazy"
           ></video>
         </div>
+        <div class="scrollUpContainer"><a href="#testWriting"><p class="scrollUp">Scroll Up</p></a></div>
       </div>
       <!-- CASE FOUR ARTICLE ----------------------------------------------------------------------------->
       <div class="caseArticle" id="caseFourIDArticle">
@@ -217,14 +220,23 @@
         </div>
         <div class="articleRow articleRowFour">
           <img src="img/case_4_mask.JPG" alt="Mask" />
+          <img src="img/Mickie 2.jpg" alt="">
+          <img src="img/Mickie.jpg" alt="No Mask" />
+          
         </div>
-        <div class="articleRow articleRowFour">
-          <img src="img/case_4_nomask.JPG" alt="No Mask" />
-        </div>
+        <div class="scrollUpContainer"><a href="#testWriting"><p class="scrollUp">Scroll Up</p></a></div>
       </div>
     </main>
     <!-- FOOTER ------------------------------------------------------------------------------------------>
-    <footer id="footer1"></footer>
+    <footer id="footer1">
+      <p id="contactFormParagraph">Get in Touch</p>
+      <p id="contactFormParagraph2">The response will be sent to your email inserted below</p>
+      <form action="action_page.php" method="get">
+      <input type="text" id="name" name="name" placeholder="Name">
+      <input type="email" id="email" name="email" placeholder="Email">
+      <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+      <input type="submit" value="Submit" id="submit">
+    </form></footer>
     <div id="footer2"><p>© Joella Andersson, 2021</p></div>
     <script src="main.js"></script>
   </body>
