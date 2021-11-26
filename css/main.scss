@@ -1,6 +1,5 @@
 $orange-color: #cf5c36;
 $pink-color: #ed9298;
-$yellow-color: #e1c141;
 $bone-color: #f9f6ee;
 $offwhite-color: #faf9f6;
 $white-color: #ffffff;
@@ -10,6 +9,7 @@ $grey-color: #333333;
 // font-family: 'Inconsolata', monospace;
 // font-family: 'Noto Serif', serif;
 // font-family: 'Poppins', sans-serif;
+
 a {
   text-decoration: none;
   color: $grey-color;
@@ -35,8 +35,6 @@ body {
   margin-top: -11vh;
   position: absolute;
 }
-// #introductionLineContainer {
-// }
 #introductionLine {
   font-family: "Poppins", sans-serif;
   display: flex;
@@ -46,7 +44,6 @@ body {
   height: 50vh;
   box-sizing: border-box;
   justify-content: space-between;
-  // padding-right: 25vw;
   p {
     display: flex;
     flex-direction: column;
@@ -90,9 +87,6 @@ body {
   margin: 0px;
   display: none;
   float: right;
-  // position: absolute;
-  // top: 4vh;
-  // right: 0px;
 }
 .introOpenClass {
   display: block;
@@ -100,82 +94,6 @@ body {
 #contactIDopen > span {
   font-weight: 600;
 }
-// .introductionButtonInvisible {
-//   display: none;
-//   // padding: 15px;
-//   // margin: 8px;
-//   // text-align: center;
-//   // color: $bone-color;
-//   // border-style: solid;
-//   // border-color: $bone-color;
-//   // border-width: 2px;
-//   // border-radius: 30px;
-// }
-// .introductionButtonClicked {
-//   transition: 1s;
-//   background-color: $bone-color;
-//   display: block;
-//   float: right;
-//   color: $grey-color;
-//   width: 20vw;
-//   box-sizing: border-box;
-//   padding: 2vw;
-// }
-// // #jesusIDopen {
-// //   transition: 1s;
-// //   background-color: $bone-color;
-// //   display: none;
-// //   float: right;
-// //   color: $grey-color;
-// //   width: 20vw;
-// //   box-sizing: border-box;
-// //   padding: 2vw;
-// // }
-// #nationalityIDopen {
-//   transition: 1s;
-//   background-color: $bone-color;
-//   display: none;
-//   float: right;
-//   color: $grey-color;
-//   width: 20vw;
-//   box-sizing: border-box;
-//   padding: 2vw;
-//   margin: 2vw 0px;
-// }
-// #contactIDopen {
-//   transition: 1s;
-//   background-color: $bone-color;
-//   display: none;
-//   float: right;
-//   color: $grey-color;
-//   width: 20vw;
-//   box-sizing: border-box;
-//   padding: 1vw;
-//   line-height: 2em;
-//   margin: 5vw 0px;
-// }
-// #lingoIDopen {
-//   transition: 1s;
-//   background-color: $bone-color;
-//   display: none;
-//   float: right;
-//   color: $grey-color;
-//   width: 20vw;
-//   box-sizing: border-box;
-//   padding: 2vw;
-//   margin: 2vw 0px;
-// }
-// #mindIDopen {
-//   transition: 1s;
-//   background-color: $bone-color;
-//   display: none;
-//   float: right;
-//   color: $grey-color;
-//   width: 20vw;
-//   box-sizing: border-box;
-//   padding: 2vw;
-//   margin: 1.5vw 0px;
-// }
 .stickyLogo {
   width: 10vw;
   border-radius: 0 0 30px 30px;
@@ -187,7 +105,7 @@ body {
   z-index: 10;
 }
 
-// TEST
+// CASE CIRCLES
 #testWriting {
   display: flex;
   justify-content: space-around;
@@ -209,10 +127,6 @@ body {
   align-items: center;
 }
 .testWritingItem:hover {
-  // transition: 1s;
-  // box-shadow: 0px 0px 30px 5px rgba($grey-color, 0.2);
-  // border-style: none;
-  // transition: 0.5s;
   color: $orange-color;
   border-color: $orange-color;
 }
@@ -262,27 +176,13 @@ h1 {
     }
   }
 }
-// .caseContainerVisible {
-//   transition: 1s;
-//   opacity: 100%;
-// }
 .caseContainer:hover {
-  // transition: 0.5s;
   color: $orange-color;
   border-color: $orange-color;
-  // box-shadow: 0px 0px 30px 5px rgba($grey-color, 0.2);
-  // background-color: $bone-color;
   cursor: pointer;
-  // .caseContainerTitle {
-  // transition: 0.5s;
-  // opacity: 100%;
-  // color: $orange-color;
-  // }
 }
 .caseContainerClicked {
   transition: 0.5s;
-  // border-radius: 0%;
-  // box-shadow: 0px 0px 30px 5px rgba($grey-color, 0.2);
   background-color: $orange-color;
   color: $bone-color;
   cursor: pointer;
@@ -311,10 +211,8 @@ h1 {
   width: 100vw;
   margin: auto;
   h1 {
-    // background-color: $bone-color;
     color: $grey-color;
     padding-top: 5vw;
-    // padding-bottom: 5vw;
     margin: auto;
     font-size: 15vw;
     text-align: center;
@@ -334,7 +232,6 @@ h1 {
   padding: 2vw;
   padding-right: 3vw;
   margin: 0px;
-  // margin-top: 2vw;
   margin-bottom: 5vw;
   border-radius: 0px 30px 30px 0px;
   box-sizing: border-box;
@@ -443,11 +340,9 @@ h1 {
   }
 }
 #caseFourIDArticle {
-  // width: 100vw;
   .articleRow {
     width: 80vw;
     video {
-      // width: 100vw;
       width: 80vw;
     }
     img {
@@ -457,7 +352,6 @@ h1 {
   .articleRowFour {
     display: flex;
     justify-content: space-between;
-    // flex-direction: row;
     div {
       width: 25vw;
     }
