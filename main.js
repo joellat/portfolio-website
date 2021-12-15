@@ -112,6 +112,7 @@ function pauseVideo() {
   } else {
     document.getElementById("introductionVideo").style.display = "block";
     document.getElementById("introductionVideo").play();
+    document.getElementById("headImageClass").style.display = "none";
   }
 }
 

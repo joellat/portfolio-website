@@ -21,19 +21,24 @@ body {
   font-family: "Poppins", sans-serif;
   color: $bone-color;
 }
+// header {
+//   margin-top: -11vh;
+// }
 #headDiv {
   position: relative;
+  margin-top: -11vh;
 }
 #headImageClass {
   width: 100vw;
-  display: block;
+  display: none;
+  // margin-top: -11vh;
 }
 #introductionVideo {
   display: block;
   overflow: hidden;
   width: 100vw;
-  margin-top: -11vh;
-  position: absolute;
+  // margin-top: -11vh;
+  // position: absolute;
 }
 #introductionLine {
   font-family: "Poppins", sans-serif;
