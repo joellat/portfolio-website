@@ -4,76 +4,11 @@ $bone-color: #f9f6ee;
 $offwhite-color: #faf9f6;
 $white-color: #ffffff;
 $grey-color: #333333;
-$yellow-color: #f4d698;
-$green-color: #009849;
 
 // font-family: 'Bebas Neue', cursive;
 // font-family: 'Inconsolata', monospace;
 // font-family: 'Noto Serif', serif;
 // font-family: 'Poppins', sans-serif;
-header {
-  img {
-    width: 100vw;
-    display: block;
-    // box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];
-    box-shadow: 8px 8px 14px 0 rgba(0, 0, 0, 0.15),
-      -8px -8px 10px 0 rgb(255, 255, 255);
-  }
-}
-body {
-  margin: 0px;
-  padding: 0px;
-  background-color: $offwhite-color;
-  font-family: "Poppins", sans-serif;
-  color: $offwhite-color;
-}
-#introductionLine {
-  display: flex;
-  margin-top: 5vw;
-  justify-content: space-around;
-  .introImg {
-    margin: auto;
-    transition: 0.5s;
-    height: 30vw;
-    // box-shadow: 10px 10px 14px 0 rgba(0, 0, 0, 0.2),
-    //   -8px -8px 12px 0 rgba(255, 255, 255, 0.2);
-    border-radius: 40px;
-  }
-  .introImg:hover {
-    transition: 0.5s;
-    transform: scale(1.05);
-    cursor: pointer;
-    box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
-      -8px -8px 10px 0 rgb(255, 255, 255);
-  }
-}
-.introductionContent {
-  box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
-    -8px -8px 10px 0 rgb(255, 255, 255);
-  font-size: 2vw;
-  font-weight: 300;
-  padding: 3vw;
-  width: 25vw;
-  border-radius: 40px;
-  color: $green-color;
-  p {
-    color: rgba($grey-color, 0.2);
-  }
-}
-.introductionContent:hover {
-  box-shadow: 8px 8px 12px 0 rgba(255, 255, 255) inset,
-    -8px -8px 10px 0 rgb(0, 0, 0, 0.15) inset;
-  p {
-    color: $grey-color;
-  }
-}
-.introductionLine {
-  display: flex;
-  margin-top: 5vw;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
 h2 {
   margin: 0px;
   font-size: 2vw;
@@ -82,6 +17,20 @@ a {
   text-decoration: none;
   color: $grey-color;
 }
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: $bone-color;
+  font-family: "Poppins", sans-serif;
+  color: $bone-color;
+}
+// header {
+//   margin-top: -11vh;
+// }
+#headDiv {
+  position: relative;
+  // margin-top: -11vh;
+}
 #contactID {
   background-color: $grey-color;
   color: $bone-color;
@@ -89,10 +38,106 @@ a {
   position: absolute;
   top: 5vw;
 }
+#headImageClass {
+  width: 100vw;
+  display: none;
+  // margin-top: -11vh;
+}
+#introductionVideo {
+  display: block;
+  overflow: hidden;
+  width: 100vw;
+  // margin-top: -11vh;
+}
+#introductionLine {
+  display: flex;
+  // padding: 3vw;
+  padding-right: 0px;
+  background-color: $pink-color;
+  // height: 50vw;
+  box-sizing: border-box;
+  // justify-content: space-between;
+  img {
+    // padding-left: 5vw;
+    // padding-right: 5vw;
+    margin: auto 7vw;
+    height: 15vw;
+    // margin: auto;
+    box-sizing: border-box;
+  }
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 1px;
+    background-color: $bone-color;
+    div {
+      box-sizing: border-box;
+      margin-left: 1px;
+      width: 35.42vw;
+      display: flex;
+      justify-self: center;
+      background-color: $pink-color;
+      font-size: 1.5vw;
+      p {
+        width: fit-content;
+        margin: 0;
+        // justify-self: center;
+        align-self: center;
+      }
+    }
+    div:hover {
+      background-color: $grey-color;
+      cursor: pointer;
+      color: $bone-color;
+      .ddd {
+        display: block;
+      }
+      .dd {
+        display: none;
+      }
+    }
+  }
+  background-color: $pink-color;
+  position: relative;
+}
+.introductionButton {
+  // padding: 15px;
+  // padding: 1vw;
+  // margin: 8px;
+  // margin: 1vw;
+  text-align: center;
+  color: $grey-color;
+  display: block;
+  // border-style: solid;
+  // border-color: $bone-color;
+  // border-width: 2px;
+  // border-radius: 30px;
+  // font-size: 2vw;
+}
+.ddd {
+  display: none;
+  margin: 0px;
+  font-size: 1vw;
+  padding: 2vw;
+}
+// .introductionButton:hover {
+//   // color: $orange-color;
+//   // border-color: $orange-color;
+//   cursor: pointer;
+//   // background-color: $grey-color;
+//   color: $bone-color;
+//   .ddd {
+//     display: block;
+//   }
+// }
 .introClickedClass {
   border-color: $orange-color;
   color: $orange-color;
 }
+// #fourthColumnIntro {
+//   width: 25vw;
+// }
 .introductionClosed {
   border: none;
   box-sizing: border-box;
@@ -384,111 +429,87 @@ h1 {
   background-color: $grey-color;
   margin-top: 5vw;
   padding: 2vw;
-  color: $offwhite-color;
+  color: $bone-color;
   #contactFormParagraph {
-    font-size: 6vw;
+    font-size: 2vw;
     text-align: center;
     font-weight: 600;
     margin: 0px;
     margin-top: 3vw;
   }
   #contactFormParagraph2 {
-    font-size: 4vw;
+    font-size: 1vw;
     text-align: center;
     font-weight: 100;
-    width: 60vw;
+    width: 15vw;
     margin: auto;
     margin-bottom: 3vw;
   }
   form {
     text-align: center;
-    margin-bottom: 5vw;
+    margin-bottom: 2vw;
     input,
     textarea {
       display: block;
       margin: auto;
-      border-radius: 10px;
+      border-radius: 30px;
       border: none;
-      background-color: $offwhite-color;
+      border-style: solid;
+      border-color: $bone-color;
+      border-width: 2px;
+      background-color: $bone-color;
       color: $grey-color;
       font-family: "Poppins", sans-serif;
       font-weight: 300;
-      margin-top: 5vw;
-      padding: 3vw;
-      width: 70vw;
+      margin-top: 1vw;
+      padding: 1vw;
+      width: 25vw;
     }
     #message {
       height: 20vh;
     }
     #submit {
-      width: 30vw;
+      width: 10vw;
     }
     #submit:hover {
-      color: $green-color;
+      color: $orange-color;
     }
     input:focus,
     textarea:focus {
       border-style: solid;
-      border-color: $green-color;
+      border-color: $orange-color;
       border-width: 2px;
     }
   }
 }
 
 #footer2 {
-  background-color: $green-color;
+  background-color: $pink-color;
   width: 100vw;
   margin: 0px;
   text-align: center;
   padding: 6px 0px;
-  font-size: 4vw;
   p {
     margin: 0px;
   }
 }
 
-@keyframes headerRoll {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(-100%, 0);
-  }
-}
-
 @media (min-width: 640px) {
   #introductionLine {
-    .introImg {
-      height: 15vw;
+    height: 30vw;
+    width: 100vw;
+    p {
+      flex-wrap: wrap;
+      width: 50vw;
     }
-  }
-  #footer1 {
-    #contactFormParagraph {
-      font-size: 2vw;
-    }
-    #contactFormParagraph2 {
-      font-size: 1vw;
-      width: 15vw;
-    }
-    form {
-      input,
-      textarea {
-        width: 25vw;
-        margin-top: 1vw;
-        padding: 1vw;
-      }
-      #submit {
-        width: 10vw;
-      }
-    }
-  }
-  #footer2 {
-    font-size: 2vw;
   }
 }
 
 @media (min-width: 960px) {
-  #footer2 {
-    font-size: 1vw;
+  // #headDiv {
+  // margin-top: -11vh;
+  // }
+  #introductionLine {
+    height: 25vw;
   }
 }
