@@ -4,6 +4,8 @@ let boneColor = "#f9f6ee";
 let whiteColor = "#ffffff";
 let greyColor = "#333333";
 
+let arrayStorage = [];
+
 let caseOneContainer = document.getElementById("caseOneID");
 let caseTwoContainer = document.getElementById("caseTwoID");
 let caseThreeContainer = document.getElementById("caseThreeID");
@@ -98,6 +100,30 @@ function button_click(intro_id) {
     }
     currentlyClicked.classList.add("introClickedClass");
     currentlyOpen.classList.add("introOpenClass");
+  }
+}
+
+function getID() {
+  if (localStorage.length === 0) {
+    let data = document.forms["formID"].querySelectorAll(".f");
+    let arrayContact = [].map.call(data, function (item) {
+      return { name: item.name, value: item.value };
+    });
+    arrayStorage.push(arrayContact);
+    localStorage.arrayStorage = JSON.stringify(arrayStorage);
+    console.log(localStorage);
+    console.log(arrayContact + "0");
+  } else {
+    let arrayStorage = JSON.parse(localStorage.getItem("arrayStorage"));
+    // let data = document.forms["formID"].querySelectorAll("input[type='text']");
+    let data = document.forms["formID"].querySelectorAll(".f");
+    let arrayContact = [].map.call(data, function (item) {
+      return { name: item.name, value: item.value };
+    });
+    arrayStorage.push(arrayContact);
+    localStorage.arrayStorage = JSON.stringify(arrayStorage);
+    console.log(localStorage);
+    console.log(arrayContact + "1");
   }
 }
 

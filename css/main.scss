@@ -9,7 +9,10 @@ $grey-color: #333333;
 // font-family: 'Inconsolata', monospace;
 // font-family: 'Noto Serif', serif;
 // font-family: 'Poppins', sans-serif;
-
+h2 {
+  margin: 0px;
+  font-size: 2vw;
+}
 a {
   text-decoration: none;
   color: $grey-color;
@@ -231,17 +234,16 @@ h1 {
   background-color: $pink-color;
 }
 .description {
-  float: left;
+  position: sticky;
   background-color: $grey-color;
   color: $bone-color;
   padding: 2vw;
-  padding-right: 3vw;
   margin: 0px;
   margin-bottom: 5vw;
   border-radius: 0px 30px 30px 0px;
   box-sizing: border-box;
-  width: 35vw;
-  margin-right: 80vw;
+  width: fit-content;
+  top: 5px;
 }
 .scrollUpContainer {
   width: 30vw;
@@ -257,7 +259,7 @@ h1 {
 // CASE ONE ARTICLE ---------------------------------------------------------------------------------------
 .articleRow {
   box-sizing: border-box;
-  margin-bottom: 10vw;
+  // margin-bottom: 10vw;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -266,7 +268,8 @@ h1 {
   font-size: 1.3vw;
   font-family: "Noto Serif", serif;
   width: 60vw;
-  margin: 10vw auto;
+  margin: 0px auto;
+  margin-bottom: 10vw;
   img {
     width: 60vw;
   }
@@ -405,6 +408,9 @@ h1 {
       margin-top: 1vw;
       padding: 1vw;
       width: 25vw;
+    }
+    #message {
+      height: 20vh;
     }
     #submit {
       width: 10vw;

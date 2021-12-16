@@ -139,7 +139,7 @@
       <div class="caseArticle" id="caseOneIDArticle">
         <h1>Case One</h1>
         <div class="description">
-          <p><h2>Personal Brand</h2>Assignment number one contains my personal brand with logotype, typography, colors, business card design and shapes</p>
+          <h2>Personal Brand</h2>
         </div>
 
         <div class="articleRow articleRowThree">
@@ -168,10 +168,11 @@
       <div class="caseArticle" id="caseTwoIDArticle">
         <h1>Case Two</h1>
         <div class="description">
-          <p><h2>UI-Wireframe</h2>Assignment number two contains the wireframe for an amusement park with four 'stages' in the process of buying a ticket to a</p>
+          <p><h2>CHANGE</h2>Magazine</p>
         </div>
-        <div class="articleRow2 bigbigContainer">
-          <video src="img/case_2_video.mov" controls></video>
+        <!-- <div class="articleRow2 bigbigContainer"> -->
+
+          <!-- <video src="img/case_2_video.mov" controls></video>
           <div class="articleRow2 bigContainer">
             <img src="img/case_2_logotype.png" alt="Logotype" />
             <div class="iconFlex">
@@ -182,23 +183,40 @@
               <img src="img/case_2_icon_5.png" alt="Icon 5" />
               <img src="img/case_2_icon_6.png" alt="Icon 6" />
             </div>
+          </div> -->
+        <!-- </div> -->
+          <div class="articleRow">
+            <img src="img/mockup-change-cover.jpg" alt="Change Mockup" />
           </div>
-        </div>
-        <div class="articleRow2 articleRow2Three">
-          <img class="wireframe" src="img/case_2_page_1.png" alt="Page 1" />
+          <div class="articleRow">
+            <img src="img/mockup-change-introduction.jpg" alt="Change Mockup" />
+          </div>
+          <div class="articleRow">
+            <img src="img/mockup-change-typography.jpg" alt="Change Mockup" />
+          </div>
+          <div class="articleRow">
+            <img src="img/mockup-change-print.jpg" alt="Change Mockup" />
+          </div>
+          <div class="articleRow">
+            <img src="img/mockup-change-ipad.jpg" alt="Change Mockup" />
+          </div>
+
+          <!-- <img class="wireframe" src="img/case_2_page_1.png" alt="Page 1" />
           <img class="wireframe" src="img/case_2_page_2.png" alt="Page 2" />
           <img class="wireframe" src="img/case_2_page_3.png" alt="Page 3" />
-          <img class="wireframe" src="img/case_2_page_4.png" alt="Page 4" />
-        </div>
+          <img class="wireframe" src="img/case_2_page_4.png" alt="Page 4" /> -->
         <div class="scrollUpContainer"><a href="#testWriting"><p class="scrollUp">Scroll Up</p></a></div>
       </div>
       <!-- CASE THREE ARTICLE ---------------------------------------------------------------------------->
       <div class="caseArticle" id="caseThreeIDArticle">
         <h1>Case Three</h1>
         <div class="description">
-          <p><h2>Motion Graphic</h2>The 'bubble girl'. Sometimes bubblegum is the best medicine.</p>
+          <p><h2>GymTrackr</h2>A hypothetical company</p>
         </div>
         <div class="articleRow">
+            <img src="img/GymTrackr_website.png" alt="Change Mockup" />
+          </div>
+        <!-- <div class="articleRow">
           <video
             src="img/case_3_video.mp4"
             id="case4Video"
@@ -206,14 +224,14 @@
             muted
             loading="lazy"
           ></video>
-        </div>
+        </div> -->
         <div class="scrollUpContainer"><a href="#testWriting"><p class="scrollUp">Scroll Up</p></a></div>
       </div>
       <!-- CASE FOUR ARTICLE ----------------------------------------------------------------------------->
       <div class="caseArticle" id="caseFourIDArticle">
         <h1>Case Four</h1>
         <div class="description">
-          <p><h2>'Mickie'</h2>An artwork, put into motion. The eyes are the window to the soul.</p>
+          <p><h2>MICKIE</h2>Motion Graphic</p>
         </div>
         <div class="articleRow">
           <video src="img/case_4_video.mp4" autoplay loop muted></video>
@@ -231,11 +249,11 @@
     <footer id="footer1">
       <p id="contactFormParagraph">Get in Touch</p>
       <p id="contactFormParagraph2">The response will be sent to your email inserted below</p>
-      <form action="action_page.php" method="get">
-      <input type="text" id="name" name="name" placeholder="Name">
-      <input type="email" id="email" name="email" placeholder="Email">
-      <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-      <input type="submit" value="Submit" id="submit">
+      <form id="formID">
+      <input type="text" id="name" name="name" placeholder="Name" class="f">
+      <input type="text" id="email" name="email" placeholder="Email" class="f">
+      <textarea type="text" name="message" id="message" cols="30" rows="10" placeholder="Message" class="f"></textarea>
+      <input type="button" value="Submit" id="submit" onclick="getID();">
     </form></footer>
     <div id="footer2"><p>© Joella Andersson, 2021</p></div>
     <script src="main.js"></script>
