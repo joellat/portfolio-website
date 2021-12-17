@@ -15,7 +15,7 @@ header {
     width: 100vw;
     display: block;
     position: relative;
-    box-shadow: 8px 8px 14px 0 rgba(0, 0, 0, 0.2),
+    box-shadow: 8px 8px 14px 0 rgba(0, 0, 0, 0.3),
       -8px -8px 10px 0 rgb(255, 255, 255);
   }
 }
@@ -31,6 +31,15 @@ header {
       -5px -5px 10px 0 rgba(255, 255, 255, 0.1);
     border-radius: 40px;
     padding: 1vw;
+  }
+}
+a.buttonActive:active {
+  #goButton {
+    p {
+      box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15) inset,
+        -8px -8px 5px 0 rgba(255, 255, 255, 0.05) inset;
+      transform: scale(0.97);
+    }
   }
 }
 #goButton:hover {
@@ -95,12 +104,130 @@ body {
   width: 90vw;
   margin: auto;
   border-radius: 50px;
-  img {
-    width: 30vw;
-    margin: 5vw;
+  #I1Row1 {
+    display: flex;
+    justify-content: space-around;
+    img {
+      width: 30vw;
+      margin: 5vw;
+      box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
+        -8px -8px 10px 0 rgb(255, 255, 255);
+      border-radius: 40px;
+    }
+    p {
+      span {
+        font-size: 2vw;
+        font-weight: 900;
+      }
+      width: 30vw;
+      margin: 5vw;
+      justify-self: center;
+      text-align: center;
+      align-self: center;
+    }
+  }
+  #I1Row2 {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    // padding-bottom: 5vw;
+    position: relative;
+    div {
+      width: 8vw;
+      height: 8vw;
+      // position: relative;
+      // background-image: url("../img/CvIconsWhite 16 Artboard 1 Copy 7.png");
+      // background-size: contain;
+      box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
+        -8px -8px 10px 0 rgb(255, 255, 255);
+      border-radius: 50%;
+      overflow: hidden;
+      animation-duration: 2s;
+      animation-timing-function: ease;
+      animation-iteration-count: infinite;
+      animation-name: slide;
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        background: rgba(31, 2, 2, 0.5);
+        width: 60px;
+        height: 100%;
+        top: 0;
+        filter: blur(30px);
+        transform: translateX(-100px) skewX(-15deg);
+      }
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.2);
+        width: 30px;
+        height: 100%;
+        top: 0;
+        filter: blur(5px);
+        transform: translateX(-100px) skewX(-15deg);
+      }
+      &::hover {
+        cursor: pointer;
+      }
+    }
+
+    // a:hover:before {
+    //   content: "";
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0px;
+    //   width: 10%;
+    //   // height: 6vw;
+    //   background: rgba(255, 255, 255, 0.3);
+    //   transform: skewX(-30deg);
+    //   animation-name: slide;
+    //   animation-duration: 2s;
+    //   animation-timing-function: ease-in-out;
+    //   animation-delay: 0.3s;
+    //   animation-iteration-count: infinite;
+    //   animation-direction: alternate;
+    //   background: linear-gradient(
+    //     to right,
+    //     rgba(255, 255, 255, 0.13) 0%,
+    //     rgba(255, 255, 255, 0.5) 77%,
+    //     rgba(255, 255, 255, 0.8) 92%,
+    //     rgba(255, 255, 255, 0) 100%
+    //   );
+    // }
   }
 }
-
+@keyframes slide {
+  0% {
+    background-position: 1% 0%;
+  }
+  50% {
+    background-position: 99% 100%;
+  }
+  100% {
+    background-position: 1% 0%;
+  }
+}
+// @keyframes slide {
+//   0% {
+//     left: 0;
+//     top: 0;
+//     height: 0vw;
+//   }
+//   50% {
+//     left: 2.5vw;
+//     top: 0.5vw;
+//     height: 4.5vw;
+//   }
+//   100% {
+//     left: 4vw;
+//     top: 4vw;
+//     height: 0vw;
+//   }
+// }
 h2 {
   margin: 0px;
   font-size: 2vw;
@@ -473,7 +600,7 @@ h1 {
   padding: 6px 0px;
   font-size: 4vw;
   box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
-    -5px -5px 10px 0 rgba(255, 255, 255, 0.1);
+    -1px -1px 8px 0 rgba(255, 255, 255, 0.3);
   p {
     margin: 0px;
   }
@@ -511,6 +638,11 @@ h1 {
       }
       #submit {
         width: 10vw;
+      }
+      #submit:active {
+        box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15) inset,
+          -8px -8px 5px 0 rgba(255, 255, 255, 0.05) inset;
+        transform: scale(0.97);
       }
     }
   }

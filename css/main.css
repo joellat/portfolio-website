@@ -6,8 +6,8 @@ header img {
   width: 100vw;
   display: block;
   position: relative;
-  -webkit-box-shadow: 8px 8px 14px 0 rgba(0, 0, 0, 0.2), -8px -8px 10px 0 white;
-          box-shadow: 8px 8px 14px 0 rgba(0, 0, 0, 0.2), -8px -8px 10px 0 white;
+  -webkit-box-shadow: 8px 8px 14px 0 rgba(0, 0, 0, 0.3), -8px -8px 10px 0 white;
+          box-shadow: 8px 8px 14px 0 rgba(0, 0, 0, 0.3), -8px -8px 10px 0 white;
 }
 
 #goButton {
@@ -26,6 +26,13 @@ header img {
           box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -5px -5px 10px 0 rgba(255, 255, 255, 0.1);
   border-radius: 40px;
   padding: 1vw;
+}
+
+a.buttonActive:active #goButton p {
+  -webkit-box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15) inset, -8px -8px 5px 0 rgba(255, 255, 255, 0.05) inset;
+          box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15) inset, -8px -8px 5px 0 rgba(255, 255, 255, 0.05) inset;
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
 }
 
 #goButton:hover {
@@ -113,9 +120,123 @@ body {
   border-radius: 50px;
 }
 
-#I1Content img {
+#I1Content #I1Row1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#I1Content #I1Row1 img {
   width: 30vw;
   margin: 5vw;
+  -webkit-box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -8px -8px 10px 0 white;
+          box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -8px -8px 10px 0 white;
+  border-radius: 40px;
+}
+
+#I1Content #I1Row1 p {
+  width: 30vw;
+  margin: 5vw;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#I1Content #I1Row1 p span {
+  font-size: 2vw;
+  font-weight: 900;
+}
+
+#I1Content #I1Row2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  margin: auto;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+#I1Content #I1Row2 div {
+  width: 8vw;
+  height: 8vw;
+  -webkit-box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -8px -8px 10px 0 white;
+          box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -8px -8px 10px 0 white;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: slide;
+          animation-name: slide;
+}
+
+#I1Content #I1Row2 div::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(31, 2, 2, 0.5);
+  width: 60px;
+  height: 100%;
+  top: 0;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  -webkit-transform: translateX(-100px) skewX(-15deg);
+          transform: translateX(-100px) skewX(-15deg);
+}
+
+#I1Content #I1Row2 div::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  width: 30px;
+  height: 100%;
+  top: 0;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-transform: translateX(-100px) skewX(-15deg);
+          transform: translateX(-100px) skewX(-15deg);
+}
+
+#I1Content #I1Row2 div::hover {
+  cursor: pointer;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    background-position: 1% 0%;
+  }
+  50% {
+    background-position: 99% 100%;
+  }
+  100% {
+    background-position: 1% 0%;
+  }
+}
+
+@keyframes slide {
+  0% {
+    background-position: 1% 0%;
+  }
+  50% {
+    background-position: 99% 100%;
+  }
+  100% {
+    background-position: 1% 0%;
+  }
 }
 
 h2 {
@@ -600,8 +721,8 @@ h1 {
   text-align: center;
   padding: 6px 0px;
   font-size: 4vw;
-  -webkit-box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -5px -5px 10px 0 rgba(255, 255, 255, 0.1);
-          box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -5px -5px 10px 0 rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -1px -1px 8px 0 rgba(255, 255, 255, 0.3);
+          box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -1px -1px 8px 0 rgba(255, 255, 255, 0.3);
 }
 
 #footer2 p {
@@ -649,6 +770,12 @@ h1 {
   }
   #footer1 form #submit {
     width: 10vw;
+  }
+  #footer1 form #submit:active {
+    -webkit-box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15) inset, -8px -8px 5px 0 rgba(255, 255, 255, 0.05) inset;
+            box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15) inset, -8px -8px 5px 0 rgba(255, 255, 255, 0.05) inset;
+    -webkit-transform: scale(0.97);
+            transform: scale(0.97);
   }
   #footer2 {
     font-size: 2vw;
