@@ -7,71 +7,98 @@ $grey-color: #333333;
 $yellow-color: #f4d698;
 $green-color: #009849;
 
-// font-family: 'Bebas Neue', cursive;
-// font-family: 'Inconsolata', monospace;
-// font-family: 'Noto Serif', serif;
-// font-family: 'Poppins', sans-serif;
+html {
+  scroll-behavior: smooth;
+}
 header {
   img {
     width: 100vw;
     display: block;
-    // box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];
-    box-shadow: 8px 8px 14px 0 rgba(0, 0, 0, 0.15),
+    position: relative;
+    box-shadow: 8px 8px 14px 0 rgba(0, 0, 0, 0.2),
       -8px -8px 10px 0 rgb(255, 255, 255);
   }
+}
+#goButton {
+  display: flex;
+  position: absolute;
+  top: 40vw;
+  color: rgba($grey-color, 0.5);
+  width: 100vw;
+  p {
+    margin: auto;
+    box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
+      -5px -5px 10px 0 rgba(255, 255, 255, 0.1);
+    border-radius: 40px;
+    padding: 1vw;
+  }
+}
+#goButton:hover {
+  cursor: pointer;
 }
 body {
   margin: 0px;
   padding: 0px;
   background-color: $offwhite-color;
   font-family: "Poppins", sans-serif;
-  color: $offwhite-color;
+  color: $grey-color;
 }
-#introductionLine {
-  display: flex;
-  margin-top: 5vw;
-  justify-content: space-around;
-  .introImg {
-    margin: auto;
-    transition: 0.5s;
-    height: 30vw;
-    // box-shadow: 10px 10px 14px 0 rgba(0, 0, 0, 0.2),
-    //   -8px -8px 12px 0 rgba(255, 255, 255, 0.2);
-    border-radius: 40px;
-  }
-  .introImg:hover {
-    transition: 0.5s;
-    transform: scale(1.05);
-    cursor: pointer;
-    box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
-      -8px -8px 10px 0 rgb(255, 255, 255);
-  }
-}
+
 .introductionContent {
   box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
     -8px -8px 10px 0 rgb(255, 255, 255);
   font-size: 2vw;
   font-weight: 300;
   padding: 3vw;
-  width: 25vw;
+  width: 20vw;
   border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: $green-color;
   p {
-    color: rgba($grey-color, 0.2);
+    color: rgba($grey-color, 0.5);
   }
 }
 .introductionContent:hover {
-  box-shadow: 8px 8px 12px 0 rgba(255, 255, 255) inset,
-    -8px -8px 10px 0 rgb(0, 0, 0, 0.15) inset;
+  cursor: pointer;
   p {
-    color: $grey-color;
+    color: rgba($grey-color, 0.6);
   }
 }
 .introductionLine {
   display: flex;
   margin-top: 5vw;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin: 5vw;
   flex-wrap: wrap;
+}
+
+.IClickedClass {
+  box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15) inset,
+    -8px -8px 10px 0 rgb(255, 255, 255) inset;
+  background-color: rgba($grey-color, 0.01);
+  p {
+    transform: scale(0.97);
+  }
+}
+.IContent {
+  display: none;
+}
+.IContentClickedClass {
+  display: block;
+}
+#I1Content {
+  margin-top: 5vw;
+  box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
+    -8px -8px 10px 0 rgb(255, 255, 255);
+  width: 90vw;
+  margin: auto;
+  border-radius: 50px;
+  img {
+    width: 30vw;
+    margin: 5vw;
+  }
 }
 
 h2 {
@@ -82,12 +109,8 @@ a {
   text-decoration: none;
   color: $grey-color;
 }
-#contactID {
-  background-color: $grey-color;
-  color: $bone-color;
-  border-color: $grey-color;
-  position: absolute;
-  top: 5vw;
+img {
+  max-width: 100%;
 }
 .introClickedClass {
   border-color: $orange-color;
@@ -381,6 +404,8 @@ h1 {
 }
 //FOOTER --------------------------------------------------------------------------------------------------
 #footer1 {
+  box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
+    -8px -8px 10px 0 rgb(255, 255, 255);
   background-color: $grey-color;
   margin-top: 5vw;
   padding: 2vw;
@@ -409,8 +434,10 @@ h1 {
       margin: auto;
       border-radius: 10px;
       border: none;
-      background-color: $offwhite-color;
-      color: $grey-color;
+      background-color: $grey-color;
+      box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15) inset,
+        -8px -8px 5px 0 rgba(255, 255, 255, 0.05) inset;
+      color: rgba($bone-color, 0.8);
       font-family: "Poppins", sans-serif;
       font-weight: 300;
       margin-top: 5vw;
@@ -422,16 +449,19 @@ h1 {
     }
     #submit {
       width: 30vw;
+      box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
+        -5px -5px 10px 0 rgba(255, 255, 255, 0.05);
     }
     #submit:hover {
       color: $green-color;
     }
-    input:focus,
-    textarea:focus {
-      border-style: solid;
-      border-color: $green-color;
-      border-width: 2px;
-    }
+    // input: focus;
+    // textarea:focus {
+    // border-style: solid;
+    // border-color: $green-color;
+    // border-width: 2px;
+    // border: none;
+    // }
   }
 }
 
@@ -442,6 +472,8 @@ h1 {
   text-align: center;
   padding: 6px 0px;
   font-size: 4vw;
+  box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
+    -5px -5px 10px 0 rgba(255, 255, 255, 0.1);
   p {
     margin: 0px;
   }
@@ -492,3 +524,30 @@ h1 {
     font-size: 1vw;
   }
 }
+
+// #introductionLine {
+//   display: flex;
+//   margin-top: 5vw;
+//   justify-content: space-around;
+//   .introImg {
+//     margin: auto;
+//     transition: 0.5s;
+//     height: 30vw;
+//     // box-shadow: 10px 10px 14px 0 rgba(0, 0, 0, 0.2),
+//     //   -8px -8px 12px 0 rgba(255, 255, 255, 0.2);
+//     border-radius: 40px;
+//   }
+//   .introImg:hover {
+//     transition: 0.5s;
+//     transform: scale(1.05);
+//     cursor: pointer;
+//     box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
+//       -8px -8px 10px 0 rgb(255, 255, 255);
+//   }
+// }
+
+// font-family: 'Bebas Neue', cursive;
+// font-family: 'Inconsolata', monospace;
+// font-family: 'Noto Serif', serif;
+// font-family: 'Poppins', sans-serif;
+// box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];

@@ -50,6 +50,8 @@ let introOpenArray = [
   lingoIDopen,
   contactIDopen,
 ];
+let IHeaderArray = [I1, I2, I3];
+let IContentArray = [I1Content, I2Content, I3Content];
 
 function reply_click(clicked_id) {
   let currentCaseContainer = document.getElementById(clicked_id);
@@ -77,29 +79,55 @@ function reply_click(clicked_id) {
   }
 }
 
+// function button_click(intro_id) {
+//   let currentlyClicked = document.getElementById(intro_id);
+//   let currentlyOpen = document.getElementById(intro_id + "open");
+//   if (currentlyClicked.classList.contains("introClickedClass")) {
+//     currentlyClicked.classList.remove("introClickedClass");
+//     currentlyOpen.classList.remove("introOpenClass");
+//   } else {
+//     for (let i = 0; i < 5; i++) {
+//       if (introductionArray[i].classList.contains("introClickedClass")) {
+//         introductionArray[i].classList.remove("introClickedClass");
+//       } else {
+//         continue;
+//       }
+//     }
+//     for (let i = 0; i < 5; i++) {
+//       if (introOpenArray[i].classList.contains("introOpenClass")) {
+//         introOpenArray[i].classList.remove("introOpenClass");
+//       } else {
+//         continue;
+//       }
+//     }
+//     currentlyClicked.classList.add("introClickedClass");
+//     currentlyOpen.classList.add("introOpenClass");
+//   }
+// }
+
 function button_click(intro_id) {
   let currentlyClicked = document.getElementById(intro_id);
-  let currentlyOpen = document.getElementById(intro_id + "open");
-  if (currentlyClicked.classList.contains("introClickedClass")) {
-    currentlyClicked.classList.remove("introClickedClass");
-    currentlyOpen.classList.remove("introOpenClass");
+  let currentlyOpen = document.getElementById(intro_id + "Content");
+  if (currentlyClicked.classList.contains("IClickedClass")) {
+    currentlyClicked.classList.remove("IClickedClass");
+    currentlyOpen.classList.remove("IContentClickedClass");
   } else {
-    for (let i = 0; i < 5; i++) {
-      if (introductionArray[i].classList.contains("introClickedClass")) {
-        introductionArray[i].classList.remove("introClickedClass");
+    for (let i = 0; i < 3; i++) {
+      if (IHeaderArray[i].classList.contains("IClickedClass")) {
+        IHeaderArray[i].classList.remove("IClickedClass");
       } else {
         continue;
       }
     }
-    for (let i = 0; i < 5; i++) {
-      if (introOpenArray[i].classList.contains("introOpenClass")) {
-        introOpenArray[i].classList.remove("introOpenClass");
+    for (let i = 0; i < 3; i++) {
+      if (IContentArray[i].classList.contains("IContentClickedClass")) {
+        IContentArray[i].classList.remove("IContentClickedClass");
       } else {
         continue;
       }
     }
-    currentlyClicked.classList.add("introClickedClass");
-    currentlyOpen.classList.add("introOpenClass");
+    currentlyClicked.classList.add("IClickedClass");
+    currentlyOpen.classList.add("IContentClickedClass");
   }
 }
 

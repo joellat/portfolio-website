@@ -1,8 +1,35 @@
+html {
+  scroll-behavior: smooth;
+}
+
 header img {
   width: 100vw;
   display: block;
-  -webkit-box-shadow: 8px 8px 14px 0 rgba(0, 0, 0, 0.15), -8px -8px 10px 0 white;
-          box-shadow: 8px 8px 14px 0 rgba(0, 0, 0, 0.15), -8px -8px 10px 0 white;
+  position: relative;
+  -webkit-box-shadow: 8px 8px 14px 0 rgba(0, 0, 0, 0.2), -8px -8px 10px 0 white;
+          box-shadow: 8px 8px 14px 0 rgba(0, 0, 0, 0.2), -8px -8px 10px 0 white;
+}
+
+#goButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 40vw;
+  color: rgba(51, 51, 51, 0.5);
+  width: 100vw;
+}
+
+#goButton p {
+  margin: auto;
+  -webkit-box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -5px -5px 10px 0 rgba(255, 255, 255, 0.1);
+          box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -5px -5px 10px 0 rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  padding: 1vw;
+}
+
+#goButton:hover {
+  cursor: pointer;
 }
 
 body {
@@ -10,50 +37,39 @@ body {
   padding: 0px;
   background-color: #faf9f6;
   font-family: "Poppins", sans-serif;
-  color: #faf9f6;
-}
-
-#introductionLine {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 5vw;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-#introductionLine .introImg {
-  margin: auto;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  height: 30vw;
-  border-radius: 40px;
-}
-
-#introductionLine .introImg:hover {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  cursor: pointer;
-  -webkit-box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -8px -8px 10px 0 white;
-          box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -8px -8px 10px 0 white;
+  color: #333333;
 }
 
 .introductionContent {
   -webkit-box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -8px -8px 10px 0 white;
           box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -8px -8px 10px 0 white;
   font-size: 2vw;
-  color: #333333;
   font-weight: 300;
   padding: 3vw;
-  width: 25vw;
+  width: 20vw;
   border-radius: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #009849;
+}
+
+.introductionContent p {
+  color: rgba(51, 51, 51, 0.5);
 }
 
 .introductionContent:hover {
-  -webkit-box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15) inset, -8px -8px 10px 0 white inset;
-          box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15) inset, -8px -8px 10px 0 white inset;
+  cursor: pointer;
+}
+
+.introductionContent:hover p {
+  color: rgba(51, 51, 51, 0.6);
 }
 
 .introductionLine {
@@ -61,10 +77,45 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin-top: 5vw;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 5vw;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.IClickedClass {
+  -webkit-box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15) inset, -8px -8px 10px 0 white inset;
+          box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15) inset, -8px -8px 10px 0 white inset;
+  background-color: rgba(51, 51, 51, 0.01);
+}
+
+.IClickedClass p {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+}
+
+.IContent {
+  display: none;
+}
+
+.IContentClickedClass {
+  display: block;
+}
+
+#I1Content {
+  margin-top: 5vw;
+  -webkit-box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -8px -8px 10px 0 white;
+          box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -8px -8px 10px 0 white;
+  width: 90vw;
+  margin: auto;
+  border-radius: 50px;
+}
+
+#I1Content img {
+  width: 30vw;
+  margin: 5vw;
 }
 
 h2 {
@@ -77,12 +128,8 @@ a {
   color: #333333;
 }
 
-#contactID {
-  background-color: #333333;
-  color: #f9f6ee;
-  border-color: #333333;
-  position: absolute;
-  top: 5vw;
+img {
+  max-width: 100%;
 }
 
 .introClickedClass {
@@ -485,6 +532,8 @@ h1 {
 }
 
 #footer1 {
+  -webkit-box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -8px -8px 10px 0 white;
+          box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -8px -8px 10px 0 white;
   background-color: #333333;
   margin-top: 5vw;
   padding: 2vw;
@@ -519,8 +568,10 @@ h1 {
   margin: auto;
   border-radius: 10px;
   border: none;
-  background-color: #faf9f6;
-  color: #333333;
+  background-color: #333333;
+  -webkit-box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15) inset, -8px -8px 5px 0 rgba(255, 255, 255, 0.05) inset;
+          box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15) inset, -8px -8px 5px 0 rgba(255, 255, 255, 0.05) inset;
+  color: rgba(249, 246, 238, 0.8);
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   margin-top: 5vw;
@@ -534,17 +585,12 @@ h1 {
 
 #footer1 form #submit {
   width: 30vw;
+  -webkit-box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -5px -5px 10px 0 rgba(255, 255, 255, 0.05);
+          box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -5px -5px 10px 0 rgba(255, 255, 255, 0.05);
 }
 
 #footer1 form #submit:hover {
   color: #009849;
-}
-
-#footer1 form input:focus,
-#footer1 form textarea:focus {
-  border-style: solid;
-  border-color: #009849;
-  border-width: 2px;
 }
 
 #footer2 {
@@ -554,6 +600,8 @@ h1 {
   text-align: center;
   padding: 6px 0px;
   font-size: 4vw;
+  -webkit-box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -5px -5px 10px 0 rgba(255, 255, 255, 0.1);
+          box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -5px -5px 10px 0 rgba(255, 255, 255, 0.1);
 }
 
 #footer2 p {
