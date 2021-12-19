@@ -26,6 +26,12 @@ header img {
           box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -5px -5px 10px 0 rgba(255, 255, 255, 0.1);
   border-radius: 40px;
   padding: 1vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#goButton p:hover {
+  cursor: pointer;
 }
 
 a.buttonActive:active #goButton p {
@@ -35,7 +41,111 @@ a.buttonActive:active #goButton p {
           transform: scale(0.97);
 }
 
-#goButton:hover {
+#toggleButton1 {
+  margin: 0.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: rgba(51, 51, 51, 0.5);
+  background-color: #faf9f6;
+  width: 7vw;
+  height: 4vw;
+  -webkit-box-shadow: 8px 8px 15px 0 rgba(0, 0, 0, 0.15), -10px -10px 10px 0 white;
+          box-shadow: 8px 8px 15px 0 rgba(0, 0, 0, 0.15), -10px -10px 10px 0 white;
+  border-radius: 40px;
+  margin: auto;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#toggleCircle1 {
+  position: absolute;
+  top: 0.5vw;
+  left: 0.5vw;
+  height: 3vw;
+  width: 3vw;
+  background-color: #c18277;
+  border-radius: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+#toggleCircle1:hover {
+  cursor: pointer;
+}
+
+#toggleButton2 {
+  margin: 0.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: rgba(51, 51, 51, 0.5);
+  background-color: #faf9f6;
+  width: 7vw;
+  height: 4vw;
+  -webkit-box-shadow: 8px 8px 15px 0 rgba(0, 0, 0, 0.15), -10px -10px 10px 0 white;
+          box-shadow: 8px 8px 15px 0 rgba(0, 0, 0, 0.15), -10px -10px 10px 0 white;
+  border-radius: 40px;
+  margin: auto;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#toggleCircle2 {
+  position: absolute;
+  top: 0.5vw;
+  left: 0.5vw;
+  height: 3vw;
+  width: 3vw;
+  background-color: #009849;
+  border-radius: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+#toggleCircle2:hover {
+  cursor: pointer;
+}
+
+#toggleButton3 {
+  margin: 0.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: rgba(51, 51, 51, 0.5);
+  background-color: #faf9f6;
+  width: 7vw;
+  height: 4vw;
+  -webkit-box-shadow: 8px 8px 15px 0 rgba(0, 0, 0, 0.15), -10px -10px 10px 0 white;
+          box-shadow: 8px 8px 15px 0 rgba(0, 0, 0, 0.15), -10px -10px 10px 0 white;
+  border-radius: 40px;
+  margin: auto;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#toggleCircle3 {
+  position: absolute;
+  top: 0.5vw;
+  left: 0.5vw;
+  height: 3vw;
+  width: 3vw;
+  background-color: #f4d698;
+  border-radius: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+#toggleCircle3:hover {
   cursor: pointer;
 }
 
@@ -126,6 +236,7 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-bottom: 5vw;
 }
 
 #I1Content #I1Row1 img {
@@ -136,8 +247,9 @@ body {
   border-radius: 40px;
 }
 
-#I1Content #I1Row1 p {
+#I1Content #I1Row1 p.runningText {
   width: 30vw;
+  margin: auto;
   margin: 5vw;
   -ms-grid-column-align: center;
       justify-self: center;
@@ -147,7 +259,7 @@ body {
       align-self: center;
 }
 
-#I1Content #I1Row1 p span {
+#I1Content #I1Row1 p.runningText span {
   font-size: 2vw;
   font-weight: 900;
 }
@@ -163,6 +275,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-bottom: 5vw;
   position: relative;
 }
 
@@ -173,69 +286,37 @@ body {
           box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -8px -8px 10px 0 white;
   border-radius: 50%;
   overflow: hidden;
+}
+
+#I1Content #I1Row2 div :hover {
+  cursor: pointer;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+  overflow: hidden;
+  background-image: url("../img/shine.png");
   -webkit-animation-name: slide;
           animation-name: slide;
 }
 
-#I1Content #I1Row2 div::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background: rgba(31, 2, 2, 0.5);
-  width: 60px;
-  height: 100%;
-  top: 0;
-  -webkit-filter: blur(30px);
-          filter: blur(30px);
-  -webkit-transform: translateX(-100px) skewX(-15deg);
-          transform: translateX(-100px) skewX(-15deg);
-}
-
-#I1Content #I1Row2 div::after {
-  content: "";
-  display: block;
-  position: absolute;
-  background: rgba(255, 255, 255, 0.2);
-  width: 30px;
-  height: 100%;
-  top: 0;
-  -webkit-filter: blur(5px);
-          filter: blur(5px);
-  -webkit-transform: translateX(-100px) skewX(-15deg);
-          transform: translateX(-100px) skewX(-15deg);
-}
-
-#I1Content #I1Row2 div::hover {
-  cursor: pointer;
-}
-
 @-webkit-keyframes slide {
   0% {
-    background-position: 1% 0%;
-  }
-  50% {
     background-position: 99% 100%;
   }
   100% {
-    background-position: 1% 0%;
+    background-position: 0% 0%;
   }
 }
 
 @keyframes slide {
   0% {
-    background-position: 1% 0%;
-  }
-  50% {
     background-position: 99% 100%;
   }
   100% {
-    background-position: 1% 0%;
+    background-position: 0% 0%;
   }
 }
 

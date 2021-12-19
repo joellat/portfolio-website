@@ -6,6 +6,7 @@ $white-color: #ffffff;
 $grey-color: #333333;
 $yellow-color: #f4d698;
 $green-color: #009849;
+$skin-pink: #c18277;
 
 html {
   scroll-behavior: smooth;
@@ -31,6 +32,10 @@ header {
       -5px -5px 10px 0 rgba(255, 255, 255, 0.1);
     border-radius: 40px;
     padding: 1vw;
+    box-sizing: border-box;
+  }
+  p:hover {
+    cursor: pointer;
   }
 }
 a.buttonActive:active {
@@ -41,8 +46,96 @@ a.buttonActive:active {
       transform: scale(0.97);
     }
   }
+  // #toggleButton {
+  //   p {
+  //     box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15) inset,
+  //       -8px -8px 5px 0 rgba(255, 255, 255, 0.05) inset;
+  //     transform: scale(0.97);
+  //   }
+  // }
 }
-#goButton:hover {
+#toggleButton1 {
+  margin: 0.5vw;
+  display: flex;
+  color: rgba($grey-color, 0.5);
+  background-color: $offwhite-color;
+  width: 7vw;
+  height: 4vw;
+  box-shadow: 8px 8px 15px 0 rgba(0, 0, 0, 0.15),
+    -10px -10px 10px 0 rgb(255, 255, 255);
+  border-radius: 40px;
+  margin: auto;
+  position: relative;
+  transition: 1s;
+}
+#toggleCircle1 {
+  position: absolute;
+  top: 0.5vw;
+  left: 0.5vw;
+  height: 3vw;
+  width: 3vw;
+  background-color: $skin-pink;
+  border-radius: 50%;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+#toggleCircle1:hover {
+  cursor: pointer;
+}
+#toggleButton2 {
+  margin: 0.5vw;
+  display: flex;
+  color: rgba($grey-color, 0.5);
+  background-color: $offwhite-color;
+  width: 7vw;
+  height: 4vw;
+  box-shadow: 8px 8px 15px 0 rgba(0, 0, 0, 0.15),
+    -10px -10px 10px 0 rgb(255, 255, 255);
+  border-radius: 40px;
+  margin: auto;
+  position: relative;
+  transition: 1s;
+}
+#toggleCircle2 {
+  position: absolute;
+  top: 0.5vw;
+  left: 0.5vw;
+  height: 3vw;
+  width: 3vw;
+  background-color: $green-color;
+  border-radius: 50%;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+#toggleCircle2:hover {
+  cursor: pointer;
+}
+#toggleButton3 {
+  margin: 0.5vw;
+  display: flex;
+  color: rgba($grey-color, 0.5);
+  background-color: $offwhite-color;
+  width: 7vw;
+  height: 4vw;
+  box-shadow: 8px 8px 15px 0 rgba(0, 0, 0, 0.15),
+    -10px -10px 10px 0 rgb(255, 255, 255);
+  border-radius: 40px;
+  margin: auto;
+  position: relative;
+  transition: 1s;
+}
+#toggleCircle3 {
+  position: absolute;
+  top: 0.5vw;
+  left: 0.5vw;
+  height: 3vw;
+  width: 3vw;
+  background-color: $yellow-color;
+  border-radius: 50%;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+#toggleCircle3:hover {
   cursor: pointer;
 }
 body {
@@ -107,6 +200,7 @@ body {
   #I1Row1 {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 5vw;
     img {
       width: 30vw;
       margin: 5vw;
@@ -114,12 +208,13 @@ body {
         -8px -8px 10px 0 rgb(255, 255, 255);
       border-radius: 40px;
     }
-    p {
+    p.runningText {
       span {
         font-size: 2vw;
         font-weight: 900;
       }
       width: 30vw;
+      margin: auto;
       margin: 5vw;
       justify-self: center;
       text-align: center;
@@ -132,46 +227,57 @@ body {
     margin: auto;
     flex-wrap: nowrap;
     justify-content: space-between;
-    // padding-bottom: 5vw;
+    padding-bottom: 5vw;
     position: relative;
     div {
       width: 8vw;
       height: 8vw;
       // position: relative;
-      // background-image: url("../img/CvIconsWhite 16 Artboard 1 Copy 7.png");
+      // background: linear-gradient(
+      //   to right,
+      //   rgba(255, 255, 255, 0.13) 0%,
+      //   rgba(255, 255, 255, 0.5) 77%,
+      //   rgba(255, 255, 255, 0.8) 92%,
+      //   rgba(255, 255, 255, 0) 100%
+      // );
+      // filter: blur(30px);
+      // transform: skewX(-15deg);
       // background-size: contain;
       box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
         -8px -8px 10px 0 rgb(255, 255, 255);
       border-radius: 50%;
       overflow: hidden;
-      animation-duration: 2s;
-      animation-timing-function: ease;
-      animation-iteration-count: infinite;
-      animation-name: slide;
-      &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        background: rgba(31, 2, 2, 0.5);
-        width: 60px;
-        height: 100%;
-        top: 0;
-        filter: blur(30px);
-        transform: translateX(-100px) skewX(-15deg);
-      }
-      &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        background: rgba(255, 255, 255, 0.2);
-        width: 30px;
-        height: 100%;
-        top: 0;
-        filter: blur(5px);
-        transform: translateX(-100px) skewX(-15deg);
-      }
-      &::hover {
+
+      // :before {
+      //   content: "";
+      //   display: block;
+      //   position: absolute;
+      //   background: rgba(31, 2, 2, 0.5);
+      //   width: 60px;
+      //   height: 100%;
+      //   top: 0;
+      //   filter: blur(30px);
+      //   transform: translateX(-100px) skewX(-15deg);
+      // }
+      // :after {
+      //   content: "";
+      //   display: block;
+      //   position: absolute;
+      //   background: rgba(255, 255, 255, 0.2);
+      //   width: 30px;
+      //   height: 100%;
+      //   top: 0;
+      //   filter: blur(5px);
+      //   transform: translateX(-100px) skewX(-15deg);
+      // }
+      :hover {
         cursor: pointer;
+        animation-duration: 2s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        overflow: hidden;
+        background-image: url("../img/shine.png");
+        animation-name: slide;
       }
     }
 
@@ -202,14 +308,20 @@ body {
 }
 @keyframes slide {
   0% {
-    background-position: 1% 0%;
-  }
-  50% {
     background-position: 99% 100%;
+    // box-shadow: 10px 10px 14px 0 rgba(0, 0, 0, 0.5),
+    //   -6px -6px 8px 0 rgb(255, 255, 255);
   }
   100% {
-    background-position: 1% 0%;
+    background-position: 0% 0%;
+    // box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
+    //   -8px -8px 10px 0 rgb(255, 255, 255);
   }
+  // 100% {
+  //   background-position: 99% 100%;
+  //   // box-shadow: 6px 6px 10px 0 rgba(0, 0, 0, 0.5),
+  //   //   -10px -10px 12px 0 rgb(255, 255, 255);
+  // }
 }
 // @keyframes slide {
 //   0% {
