@@ -11,48 +11,63 @@ $skin-pink: #c18277;
 html {
   scroll-behavior: smooth;
 }
+h1 {
+  color: $grey-color;
+  margin-top: 0px;
+  margin-left: 6vw;
+  font-size: 3.5vw;
+  position: relative;
+  margin-bottom: 5vw;
+}
+h2 {
+  margin: 0px;
+  margin-bottom: 1vw;
+  font-size: 2vw;
+}
+a {
+  text-decoration: none;
+  color: $grey-color;
+}
+img {
+  max-width: 100%;
+}
+p {
+  margin: 0;
+}
 header {
   img {
     width: 100vw;
     display: block;
     position: relative;
-    box-shadow: 8px 8px 14px 0 rgba(0, 0, 0, 0.3),
-      -8px -8px 10px 0 rgb(255, 255, 255);
   }
 }
-#goButton {
-  display: flex;
+.runningText {
+  transition: 1s;
+}
+
+#fartContainer {
   position: absolute;
   top: 40vw;
-  color: rgba($grey-color, 0.5);
+  display: flex;
   width: 100vw;
-  p {
-    margin: auto;
-    box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
-      -5px -5px 10px 0 rgba(255, 255, 255, 0.1);
-    border-radius: 40px;
-    padding: 1vw;
-    box-sizing: border-box;
-  }
-  p:hover {
-    cursor: pointer;
-  }
 }
-a.buttonActive:active {
-  #goButton {
-    p {
-      box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15) inset,
-        -8px -8px 5px 0 rgba(255, 255, 255, 0.05) inset;
-      transform: scale(0.97);
-    }
-  }
-  // #toggleButton {
-  //   p {
-  //     box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15) inset,
-  //       -8px -8px 5px 0 rgba(255, 255, 255, 0.05) inset;
-  //     transform: scale(0.97);
-  //   }
-  // }
+#fartLink:active {
+  transition: 0.5s;
+  box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15) inset,
+    -8px -8px 5px 0 rgba(255, 255, 255, 0.05) inset;
+  transform: scale(0.97);
+}
+#fartLink {
+  transition: 0.5s;
+  margin: auto;
+  box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
+    -5px -5px 10px 0 rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  padding: 1vw;
+}
+#fartParagraph {
+  color: rgba($grey-color, 0.5);
+  margin: 0;
 }
 #toggleButton1 {
   margin: 0.5vw;
@@ -191,12 +206,16 @@ body {
   display: block;
 }
 #I1Content {
-  margin-top: 5vw;
-  box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
-    -8px -8px 10px 0 rgb(255, 255, 255);
-  width: 90vw;
+  // margin-top: 5vw;
+  // box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
+  //   -8px -8px 10px 0 rgb(255, 255, 255);
+  // width: 90vw;
   margin: auto;
   border-radius: 50px;
+  #I1Row0 {
+    font-size: 9vw;
+    overflow: hidden;
+  }
   #I1Row1 {
     display: flex;
     justify-content: space-around;
@@ -204,8 +223,8 @@ body {
     img {
       width: 30vw;
       margin: 5vw;
-      box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
-        -8px -8px 10px 0 rgb(255, 255, 255);
+      // box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
+      //   -8px -8px 10px 0 rgb(255, 255, 255);
       border-radius: 40px;
     }
     p.runningText {
@@ -213,7 +232,7 @@ body {
         font-size: 2vw;
         font-weight: 900;
       }
-      width: 30vw;
+      width: 27vw;
       margin: auto;
       margin: 5vw;
       justify-self: center;
@@ -221,210 +240,152 @@ body {
       align-self: center;
     }
   }
-  #I1Row2 {
-    display: flex;
-    width: 80%;
-    margin: auto;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    padding-bottom: 5vw;
-    position: relative;
-    div {
-      width: 8vw;
-      height: 8vw;
-      // position: relative;
-      // background: linear-gradient(
-      //   to right,
-      //   rgba(255, 255, 255, 0.13) 0%,
-      //   rgba(255, 255, 255, 0.5) 77%,
-      //   rgba(255, 255, 255, 0.8) 92%,
-      //   rgba(255, 255, 255, 0) 100%
-      // );
-      // filter: blur(30px);
-      // transform: skewX(-15deg);
-      // background-size: contain;
-      box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
-        -8px -8px 10px 0 rgb(255, 255, 255);
-      border-radius: 50%;
+}
+#I3Row1 {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-bottom: 5vw;
+  position: relative;
+  div {
+    width: 8vw;
+    height: 8vw;
+    box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
+      -8px -8px 10px 0 rgb(255, 255, 255);
+    border-radius: 50%;
+    overflow: hidden;
+    :hover {
+      cursor: pointer;
+      animation-duration: 1s;
+      animation-timing-function: ease;
+      animation-iteration-count: 1;
       overflow: hidden;
-
-      // :before {
-      //   content: "";
-      //   display: block;
-      //   position: absolute;
-      //   background: rgba(31, 2, 2, 0.5);
-      //   width: 60px;
-      //   height: 100%;
-      //   top: 0;
-      //   filter: blur(30px);
-      //   transform: translateX(-100px) skewX(-15deg);
-      // }
-      // :after {
-      //   content: "";
-      //   display: block;
-      //   position: absolute;
-      //   background: rgba(255, 255, 255, 0.2);
-      //   width: 30px;
-      //   height: 100%;
-      //   top: 0;
-      //   filter: blur(5px);
-      //   transform: translateX(-100px) skewX(-15deg);
-      // }
-      :hover {
-        cursor: pointer;
-        animation-duration: 2s;
-        animation-timing-function: ease;
-        animation-iteration-count: infinite;
-        overflow: hidden;
-        background-image: url("../img/shine.png");
-        animation-name: slide;
-      }
+      background-image: url("../img/shine.png");
+      animation-name: slide;
     }
+  }
+}
+#skillsContainerID {
+  display: none;
+  height: 35vw;
+  justify-content: space-around;
+  animation-name: textReveal;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  overflow: hidden;
+}
+.I1Row2Class {
+  width: 27vw;
+  img {
+    width: 5vw;
+    display: block;
+  }
+}
+// #skills1 {
+//   width: 80%;
+//   height: 1vw;
+//   background-color: $skin-pink;
+//   // display: inline;
+// }
+.skillParagraph {
+  margin-top: 1vw;
+}
+.skillsBackground {
+  width: 100%;
+  height: 1vw;
+  background-color: $grey-color;
+  position: relative;
+}
+.skillsForeground {
+  height: 1vw;
+  background-color: $skin-pink;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+#skill1 {
+  width: 80%;
+  animation-name: skillFill1;
+}
+#skill2 {
+  width: 70%;
+  animation-name: skillFill2;
+}
+#skill3 {
+  width: 60%;
+  animation-name: skillFill3;
+}
+#skill4 {
+  width: 70%;
+  animation-name: skillFill4;
+}
+#skill5 {
+  width: 65%;
+  animation-name: skillFill5;
+}
 
-    // a:hover:before {
-    //   content: "";
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0px;
-    //   width: 10%;
-    //   // height: 6vw;
-    //   background: rgba(255, 255, 255, 0.3);
-    //   transform: skewX(-30deg);
-    //   animation-name: slide;
-    //   animation-duration: 2s;
-    //   animation-timing-function: ease-in-out;
-    //   animation-delay: 0.3s;
-    //   animation-iteration-count: infinite;
-    //   animation-direction: alternate;
-    //   background: linear-gradient(
-    //     to right,
-    //     rgba(255, 255, 255, 0.13) 0%,
-    //     rgba(255, 255, 255, 0.5) 77%,
-    //     rgba(255, 255, 255, 0.8) 92%,
-    //     rgba(255, 255, 255, 0) 100%
-    //   );
-    // }
+@keyframes skillFill1 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes skillFill2 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes skillFill3 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+@keyframes skillFill4 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes skillFill5 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 65%;
   }
 }
 @keyframes slide {
   0% {
     background-position: 99% 100%;
-    // box-shadow: 10px 10px 14px 0 rgba(0, 0, 0, 0.5),
-    //   -6px -6px 8px 0 rgb(255, 255, 255);
   }
   100% {
     background-position: 0% 0%;
-    // box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
-    //   -8px -8px 10px 0 rgb(255, 255, 255);
   }
-  // 100% {
-  //   background-position: 99% 100%;
-  //   // box-shadow: 6px 6px 10px 0 rgba(0, 0, 0, 0.5),
-  //   //   -10px -10px 12px 0 rgb(255, 255, 255);
-  // }
 }
-// @keyframes slide {
-//   0% {
-//     left: 0;
-//     top: 0;
-//     height: 0vw;
-//   }
-//   50% {
-//     left: 2.5vw;
-//     top: 0.5vw;
-//     height: 4.5vw;
-//   }
-//   100% {
-//     left: 4vw;
-//     top: 4vw;
-//     height: 0vw;
-//   }
-// }
-h2 {
-  margin: 0px;
-  font-size: 2vw;
-}
-a {
-  text-decoration: none;
-  color: $grey-color;
-}
-img {
-  max-width: 100%;
-}
-.introClickedClass {
-  border-color: $orange-color;
-  color: $orange-color;
-}
-.introductionClosed {
-  border: none;
-  box-sizing: border-box;
-  background-color: $grey-color;
-  color: $bone-color;
-  border-radius: 30px 0px 0px 30px;
-  width: 25vw;
-  padding: 2vw;
-  text-align: left;
-  margin: 0px;
-  display: none;
-  float: right;
-}
-.introOpenClass {
-  display: block;
-  width: 25vw;
-}
-#contactIDopen > span {
-  font-weight: 600;
-}
-.stickyLogo {
-  width: 10vw;
-  border-radius: 0 0 30px 30px;
-  position: sticky;
-  left: 85vw;
-  top: 0px;
-  justify-self: flex-start;
-  align-self: flex-start;
-  z-index: 10;
-}
-
-// CASE CIRCLES
-#testWriting {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 5vw;
-}
-.testWritingItem {
-  background-color: $bone-color;
-  border-style: solid;
-  border-color: $pink-color;
-  border-radius: 50%;
-  border-width: 2px;
-  color: $pink-color;
-  font-size: 2em;
-  font-weight: 700;
-  width: 17vw;
-  height: 17vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.testWritingItem:hover {
-  color: $orange-color;
-  border-color: $orange-color;
-}
-h1 {
-  color: $grey-color;
-  margin-top: 0px;
-  margin-left: 6vw;
-  font-size: 3.5vw;
-  position: relative;
-  margin-bottom: 5vw;
-}
-.vid {
-  width: 30vw;
-  margin-left: 5px;
-  margin: auto;
-  position: absolute;
-  bottom: 0px;
+@keyframes textReveal {
+  0% {
+    height: 0vw;
+  }
+  100% {
+    height: 35vw;
+  }
 }
 //STYLE OF CASE CONTAINERS --------------------------------------------------------------------------------
 .homeFlexContainer2 {
@@ -646,7 +607,6 @@ h1 {
   box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
     -8px -8px 10px 0 rgb(255, 255, 255);
   background-color: $grey-color;
-  margin-top: 5vw;
   padding: 2vw;
   color: $offwhite-color;
   #contactFormParagraph {
@@ -711,8 +671,8 @@ h1 {
   text-align: center;
   padding: 6px 0px;
   font-size: 4vw;
-  box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
-    -1px -1px 8px 0 rgba(255, 255, 255, 0.3);
+  // box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
+  //   -1px -1px 8px 0 rgba(255, 255, 255, 0.3);
   p {
     margin: 0px;
   }

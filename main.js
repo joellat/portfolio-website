@@ -81,51 +81,54 @@ function reply_click(clicked_id) {
     currentCaseArticle.classList.add("caseArticleOpen");
   }
 }
+
 let toggleCircleStyle = document.getElementById("toggleCircle1").style;
 let toggleButtonStyle = document.getElementById("toggleButton1").style;
+let skillsContainer = document.getElementById("skillsContainerID");
+let introductionParagraph = document.getElementById("introParagraph");
+
 function toggleFunction() {
   console.log(toggleCircleStyle);
   if (toggleCircleStyle.left === "") {
     toggleCircleStyle.left = "3.5vw";
-    // toggleButtonStyle.backgroundColor = "rgba(193, 130, 119, 0.2)";
     toggleCircleStyle.backgroundColor = offwhiteColor;
     toggleButtonStyle.backgroundColor = skinPink;
-
-    console.log(toggleCircleStyle.left);
+    skillsContainer.style.display = "flex";
+    introductionParagraph.style.opacity = "0.5";
   } else {
     toggleCircleStyle.left = "";
     toggleCircleStyle.backgroundColor = skinPink;
     toggleButtonStyle.backgroundColor = offwhiteColor;
+    introductionParagraph.style.opacity = "1";
+    skillsContainer.style.display = "none";
   }
 }
-let toggleCircleStyle2 = document.getElementById("toggleCircle2").style;
-let toggleButtonStyle2 = document.getElementById("toggleButton2").style;
-function toggleFunction2() {
-  if (toggleCircleStyle2.left === "") {
-    toggleCircleStyle2.left = "3.5vw";
-    // toggleButtonStyle2.backgroundColor = "rgba(0, 152, 73, 0.1)";
-    toggleCircleStyle2.backgroundColor = offwhiteColor;
-    toggleButtonStyle2.backgroundColor = greenColor;
-  } else {
-    toggleCircleStyle2.left = "";
-    toggleCircleStyle2.backgroundColor = greenColor;
-    toggleButtonStyle2.backgroundColor = offwhiteColor;
-  }
-}
-let toggleCircleStyle3 = document.getElementById("toggleCircle3").style;
-let toggleButtonStyle3 = document.getElementById("toggleButton3").style;
-function toggleFunction3() {
-  if (toggleCircleStyle3.left === "") {
-    toggleCircleStyle3.left = "3.5vw";
-    // toggleButtonStyle3.backgroundColor = "rgba(244, 214,152, 0.1)";
-    toggleButtonStyle3.backgroundColor = orangeColor;
-    toggleCircleStyle3.backgroundColor = offwhiteColor;
-  } else {
-    toggleCircleStyle3.left = "";
-    toggleButtonStyle3.backgroundColor = offwhiteColor;
-    toggleCircleStyle3.backgroundColor = orangeColor;
-  }
-}
+// let toggleCircleStyle2 = document.getElementById("toggleCircle2").style;
+// let toggleButtonStyle2 = document.getElementById("toggleButton2").style;
+// function toggleFunction2() {
+//   if (toggleCircleStyle2.left === "") {
+//     toggleCircleStyle2.left = "3.5vw";
+//     toggleCircleStyle2.backgroundColor = offwhiteColor;
+//     toggleButtonStyle2.backgroundColor = greenColor;
+//   } else {
+//     toggleCircleStyle2.left = "";
+//     toggleCircleStyle2.backgroundColor = greenColor;
+//     toggleButtonStyle2.backgroundColor = offwhiteColor;
+//   }
+// }
+// let toggleCircleStyle3 = document.getElementById("toggleCircle3").style;
+// let toggleButtonStyle3 = document.getElementById("toggleButton3").style;
+// function toggleFunction3() {
+//   if (toggleCircleStyle3.left === "") {
+//     toggleCircleStyle3.left = "3.5vw";
+//     toggleButtonStyle3.backgroundColor = orangeColor;
+//     toggleCircleStyle3.backgroundColor = offwhiteColor;
+//   } else {
+//     toggleCircleStyle3.left = "";
+//     toggleButtonStyle3.backgroundColor = offwhiteColor;
+//     toggleCircleStyle3.backgroundColor = orangeColor;
+//   }
+// }
 
 // function button_click(intro_id) {
 //   let currentlyClicked = document.getElementById(intro_id);

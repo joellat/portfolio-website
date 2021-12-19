@@ -20,97 +20,15 @@
     <link rel="stylesheet" type="text/css" href="css/main.css" />
   </head>
   <body id="body">
+    <!-- HEADER------------------------------------------------------------------------------------------------------------------------------------------------ -->
     <header>
-      <!-- <div id="headDiv"> -->
-      <!-- <a href="#footer1">
-          <span
-            class="introductionButton"
-            id="contactID"
-            onclick="button_click(this.id)"
-            >Get in Contact</span
-          ></a>  -->
-      <!-- <video
-        src="img/Comp 1 kopia (2).mp4"
-        loop
-        muted
-        id="introductionVideo"
-      ></video> -->
       <img src="img/C 07 Artboard 5 Copy.jpg" alt="B" />
-      <a href="#letsGo" class="buttonActive"
-        ><div id="goButton"><p>Let's go!</p></div></a
-      >
-      <!-- <img
-        id="headImageClass"
-        src="img/3.jpg"
-        alt=""
-      /> -->
-      <!-- </div> -->
+      <div id="fartContainer">
+        <a href="#letsGo" id="fartLink"><p id="fartParagraph">Lets Go!</p></a>
+      </div>
     </header>
+    <!-- MAIN------------------------------------------------------------------------------------------------------------------------------------------------ -->
     <main id="letsGo">
-      <!-- INTRODUCTION --------------------------------------------------------------------------------->
-      <!-- <div id="introductionLine">
-        <img
-          src="img/introductionFont.png"
-          alt=""
-          id="introImg1"
-          class="introImg"
-        />
-        <img src="img/myProjects.png" alt="" id="introImg2" class="introImg" />
-        <img
-          src="img/getInContact.png"
-          alt=""
-          id="introImg3"
-          class="introImg"
-        /> -->
-
-      <!-- <div>
-                <div
-                  class="introductionButton"
-                  id="nationalityID"
-                  onclick="button_click(this.id)"
-                  ><p class="dd">Sweden and Germany</p>
-                  <p class="ddd">My faith plays the biggest role in my life. It is the basis of my
-                identity and affects the way I think and work. That includes love for
-                people, but also passion and efficiency at work.</p></div
-                >
-                <div
-                  class="introductionButton"
-                  id="jesusID"
-                  onclick="button_click(this.id)"
-                  ><p>Jesus and Family</p></div
-                >
-                <div
-                  class="introductionButton"
-                  id="mindID"
-                  onclick="button_click(this.id)"
-                  ><p>Logic and Ingenuity</p></div
-                >
-                <div
-                  class="introductionButton"
-                  id="lingoID"
-                  onclick="button_click(this.id)"
-                  ><p>Swedish, German, English</p></div
-                >
-              </div> -->
-      <!-- <p id="fourthColumnIntro">
-              <span class="introductionClosed" id="jesusIDopen"
-                >My faith plays the biggest role in my life. It is the basis of my
-                identity and affects the way I think and work. That includes love for
-                people, but also passion and efficiency at work.</span
-              >
-              <span class="introductionClosed" id="nationalityIDopen"
-                >I am half swedish and half german. My swedish side has formed me into a very open person, while my german side has made me direct and honest.</span
-              >
-              <span class="introductionClosed" id="contactIDopen"
-                >Reach out to me via mail: <br> <span> joella-andersson@web.de</span> </span
-              >
-              <span class="introductionClosed" id="lingoIDopen"
-                >I speak swedish, german and english fluently. My whole program in university is conducted in english and I am currently working on a swedish website for a client.</span
-              >
-              <span class="introductionClosed" id="mindIDopen"
-                >I have always liked logical things and working with my hands on creative projects. Therefore I enjoy thinking in new ways, while involving my ingenuity at the same time.</span
-              ></p> -->
-      <!-- </div> -->
       <div class="introductionLine">
         <div
           class="introductionContent"
@@ -134,16 +52,18 @@
           <p>Get in Contact</p>
         </div>
       </div>
-
+      <!-- INTRODUCTION------------------------------------------------------------------------------------------------------------------------------------------------ -->
       <div class="IContent" id="I1Content">
+        <div id="I1Row0"><p>HEJ HELLO HOLA HALLO</p></div>
         <div id="I1Row1">
-          <img src="img/illustrationFace.JPG" alt="" />
+          <!-- <img src="img/face1.png" alt="" /> -->
           <div>
-            <p class="runningText">
-              <span>HEJ</span> and welcome to my portfolio. I am a
-              webbdeveloper, almost. Born in Sweden, raised in Germany, a unique
-              and colorful fusion. Bold but kind, organized but passionate. I
-              love code and I enjoy life.
+            <p class="runningText" id="introParagraph">
+              <!-- <span>HEJ</span>  -->
+              and welcome to my portfolio. I am a webdeveloper, almost. Born in
+              Sweden, raised in Germany, a unique and colorful fusion. Bold but
+              kind, organized but passionate. I love code and enjoy life. Toggle
+              the button to know more.
             </p>
             <div id="toggleButton1">
               <div id="toggleCircle1" onclick="toggleFunction()"></div>
@@ -156,13 +76,73 @@
             </div> -->
           </div>
         </div>
-        <div id="I1Row2">
+        <div id="skillsContainerID">
+          <div class="I1Row2Class">
+            <h2>SKILLS</h2>
+            <p class="skillParagraph">HTML5 / CSS</p>
+            <div class="skillsBackground">
+              <div id="skill1" class="skillsForeground"></div>
+            </div>
+            <p class="skillParagraph">JavaScript</p>
+            <div class="skillsBackground">
+              <div id="skill2" class="skillsForeground"></div>
+            </div>
+            <p class="skillParagraph">Wordpress</p>
+            <div class="skillsBackground">
+              <div id="skill3" class="skillsForeground"></div>
+            </div>
+            <p class="skillParagraph">Figma</p>
+            <div class="skillsBackground">
+              <div id="skill4" class="skillsForeground"></div>
+            </div>
+            <p class="skillParagraph">Adobe Illustrator</p>
+            <div class="skillsBackground">
+              <div id="skill5" class="skillsForeground"></div>
+            </div>
+          </div>
+          <div class="I1Row2Class">
+            <h2>EXPERIENCES</h2>
+            My skills! and welcome to my portfolio. I am a webdeveloper, almost.
+            Born in Sweden, raised in Germany, a unique and colorful fusion.
+            Bold but kind, organized but passionate. I love code and enjoy life.
+            Toggle the button to know more.
+          </div>
+          <div class="I1Row2Class">
+            <h2>INTERESTS</h2>
+            <img
+              src="img/iconsGrey/IconsGrey 29 Artboard 1 Copy 27.png"
+              alt=""
+            />
+            <img
+              src="img/iconsGrey/IconsGrey 30 Artboard 1 Copy 28.png"
+              alt=""
+            />
+            <img
+              src="img/iconsGrey/IconsGrey 31 Artboard 1 Copy 29.png"
+              alt=""
+            />
+            <img
+              src="img/iconsGrey/IconsGrey 32 Artboard 1 Copy 30.png"
+              alt=""
+            />
+            <img
+              src="img/iconsGrey/IconsGrey 33 Artboard 1 Copy 31.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <!-- PROJECTS------------------------------------------------------------------------------------------------------------------------------------------------ -->
+      <div class="IContent" id="I2Content">2</div>
+      <!-- CONTACT------------------------------------------------------------------------------------------------------------------------------------------------ -->
+      <div class="IContent" id="I3Content">
+        <div id="I3Row1">
           <div>
             <img src="img/CvIconsWhite 16 Artboard 1 Copy 7.png" alt="" />
           </div>
-          <div>
+          <!-- <div>
             <img src="img/CvIconsWhite 17 Artboard 1 Copy 17.png" alt="" />
-          </div>
+          </div> -->
           <div>
             <img src="img/CvIconsWhite 18 Artboard 1 Copy 8.png" alt="" />
           </div>
@@ -172,21 +152,17 @@
           <div>
             <img src="img/CvIconsWhite 20 Artboard 1 Copy 9.png" alt="" />
           </div>
-          <div>
+          <!-- <div>
             <img src="img/CvIconsWhite 21 Artboard 1 Copy 19.png" alt="" />
-          </div>
-          <div>
+          </div> -->
+          <!-- <div>
             <img src="img/CvIconsWhite 22.png" alt="" />
-          </div>
-          <div>
+          </div> -->
+          <!-- <div>
             <img src="img/CvIconsWhite 23.png" alt="" />
-          </div>
+          </div> -->
         </div>
       </div>
-
-      <div class="IContent" id="I2Content">2</div>
-      <div class="IContent" id="I3Content">3</div>
-      <!-- INTRODUCTION CODE ------------------------------------------------------------------------------>
       <!-- <img
         class="stickyLogo"
         src="img/PersonalBranding copy (1) 04 Artboard 2 Copy 4.jpg"
