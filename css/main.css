@@ -39,6 +39,7 @@ header img {
 .runningText {
   -webkit-transition: 1s;
   transition: 1s;
+  line-height: 1.5em;
 }
 
 #fartContainer {
@@ -260,8 +261,14 @@ body {
 }
 
 #I1Content #I1Row0 {
-  font-size: 9vw;
+  font-size: 4vw;
   overflow: hidden;
+  text-align: center;
+}
+
+#I1Content .hej {
+  font-weight: 900;
+  font-size: 9vw;
 }
 
 #I1Content #I1Row1 {

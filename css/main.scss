@@ -1,12 +1,13 @@
 $orange-color: #cf5c36;
 $pink-color: #ed9298;
 $bone-color: #f9f6ee;
-$offwhite-color: #faf9f6;
-$white-color: #ffffff;
+$offwhite: #faf9f6;
+$white: #ffffff;
 $grey-color: #333333;
 $yellow-color: #f4d698;
-$green-color: #009849;
-$skin-pink: #c18277;
+
+$primary-color: #009849;
+$secondary-color: #c18277;
 
 html {
   scroll-behavior: smooth;
@@ -43,6 +44,7 @@ header {
 }
 .runningText {
   transition: 1s;
+  line-height: 1.5em;
 }
 
 #fartContainer {
@@ -68,12 +70,15 @@ header {
 #fartParagraph {
   color: rgba($grey-color, 0.5);
   margin: 0;
+  // :hover {
+  //   color: rgba($grey-color, 0.6);
+  // }
 }
 #toggleButton1 {
   margin: 0.5vw;
   display: flex;
   color: rgba($grey-color, 0.5);
-  background-color: $offwhite-color;
+  background-color: $offwhite;
   width: 7vw;
   height: 4vw;
   box-shadow: 8px 8px 15px 0 rgba(0, 0, 0, 0.15),
@@ -89,7 +94,7 @@ header {
   left: 0.5vw;
   height: 3vw;
   width: 3vw;
-  background-color: $skin-pink;
+  background-color: $secondary-color;
   border-radius: 50%;
   transition: 0.5s;
   transition-timing-function: ease-in-out;
@@ -101,7 +106,7 @@ header {
   margin: 0.5vw;
   display: flex;
   color: rgba($grey-color, 0.5);
-  background-color: $offwhite-color;
+  background-color: $offwhite;
   width: 7vw;
   height: 4vw;
   box-shadow: 8px 8px 15px 0 rgba(0, 0, 0, 0.15),
@@ -117,7 +122,7 @@ header {
   left: 0.5vw;
   height: 3vw;
   width: 3vw;
-  background-color: $green-color;
+  background-color: $primary-color;
   border-radius: 50%;
   transition: 0.5s;
   transition-timing-function: ease-in-out;
@@ -129,7 +134,7 @@ header {
   margin: 0.5vw;
   display: flex;
   color: rgba($grey-color, 0.5);
-  background-color: $offwhite-color;
+  background-color: $offwhite;
   width: 7vw;
   height: 4vw;
   box-shadow: 8px 8px 15px 0 rgba(0, 0, 0, 0.15),
@@ -156,7 +161,7 @@ header {
 body {
   margin: 0px;
   padding: 0px;
-  background-color: $offwhite-color;
+  background-color: $offwhite;
   font-family: "Poppins", sans-serif;
   color: $grey-color;
 }
@@ -172,7 +177,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: $green-color;
+  color: $primary-color;
   p {
     color: rgba($grey-color, 0.5);
   }
@@ -213,8 +218,13 @@ body {
   margin: auto;
   border-radius: 50px;
   #I1Row0 {
-    font-size: 9vw;
+    font-size: 4vw;
     overflow: hidden;
+    text-align: center;
+  }
+  .hej {
+    font-weight: 900;
+    font-size: 9vw;
   }
   #I1Row1 {
     display: flex;
@@ -287,7 +297,7 @@ body {
 // #skills1 {
 //   width: 80%;
 //   height: 1vw;
-//   background-color: $skin-pink;
+//   background-color: $secondary-color;
 //   // display: inline;
 // }
 .skillParagraph {
@@ -301,7 +311,7 @@ body {
 }
 .skillsForeground {
   height: 1vw;
-  background-color: $skin-pink;
+  background-color: $secondary-color;
   position: absolute;
   top: 0;
   left: 0;
@@ -513,7 +523,7 @@ body {
   width: 30vw;
 }
 .articleRowFive {
-  background-color: $white-color;
+  background-color: $white;
   padding: 5vw;
   img {
     width: 50vw;
@@ -608,7 +618,7 @@ body {
     -8px -8px 10px 0 rgb(255, 255, 255);
   background-color: $grey-color;
   padding: 2vw;
-  color: $offwhite-color;
+  color: $offwhite;
   #contactFormParagraph {
     font-size: 6vw;
     text-align: center;
@@ -652,12 +662,12 @@ body {
         -5px -5px 10px 0 rgba(255, 255, 255, 0.05);
     }
     #submit:hover {
-      color: $green-color;
+      color: $primary-color;
     }
     // input: focus;
     // textarea:focus {
     // border-style: solid;
-    // border-color: $green-color;
+    // border-color: $primary-color;
     // border-width: 2px;
     // border: none;
     // }
@@ -665,7 +675,7 @@ body {
 }
 
 #footer2 {
-  background-color: $green-color;
+  background-color: $primary-color;
   width: 100vw;
   margin: 0px;
   text-align: center;
@@ -749,6 +759,9 @@ body {
 //       -8px -8px 10px 0 rgb(255, 255, 255);
 //   }
 // }
+
+// $green-color: #009849;
+// $skin-pink-color: #c18277;
 
 // font-family: 'Bebas Neue', cursive;
 // font-family: 'Inconsolata', monospace;
