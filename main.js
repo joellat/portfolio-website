@@ -92,12 +92,12 @@ function toggleFunction() {
   if (toggleCircleStyle.left === "") {
     toggleCircleStyle.left = "3.5vw";
     toggleCircleStyle.backgroundColor = offwhiteColor;
-    toggleButtonStyle.backgroundColor = skinPink;
+    toggleButtonStyle.backgroundColor = "#8fa8c2";
     skillsContainer.style.display = "flex";
     introductionParagraph.style.opacity = "0.5";
   } else {
     toggleCircleStyle.left = "";
-    toggleCircleStyle.backgroundColor = skinPink;
+    toggleCircleStyle.backgroundColor = "#8fa8c2";
     toggleButtonStyle.backgroundColor = offwhiteColor;
     introductionParagraph.style.opacity = "1";
     skillsContainer.style.display = "none";

@@ -6,6 +6,10 @@ $white: #ffffff;
 $grey-color: #333333;
 $yellow-color: #f4d698;
 
+$new-yello-color: #fdca3f;
+
+$grey-blue: #8fa8c2;
+
 $primary-color: #009849;
 $secondary-color: #c18277;
 
@@ -94,7 +98,7 @@ header {
   left: 0.5vw;
   height: 3vw;
   width: 3vw;
-  background-color: $secondary-color;
+  background-color: $grey-blue;
   border-radius: 50%;
   transition: 0.5s;
   transition-timing-function: ease-in-out;
@@ -184,9 +188,9 @@ body {
 }
 .introductionContent:hover {
   cursor: pointer;
-  p {
-    color: rgba($grey-color, 0.6);
-  }
+  // p {
+  //   color: rgba($grey-color, 0.6);
+  // }
 }
 .introductionLine {
   display: flex;
@@ -202,6 +206,9 @@ body {
   background-color: rgba($grey-color, 0.01);
   p {
     transform: scale(0.97);
+    color: rgba($color: $grey-blue, $alpha: 0.6);
+    // color: rgba($orange-color, $alpha: 0.6);
+    // text-shadow: 0 0 3px white;
   }
 }
 .IContent {
@@ -241,6 +248,7 @@ body {
       span {
         font-size: 2vw;
         font-weight: 900;
+        color: #097d5a;
       }
       width: 27vw;
       margin: auto;
@@ -277,9 +285,10 @@ body {
     }
   }
 }
+
 #skillsContainerID {
   display: none;
-  height: 35vw;
+  height: 40vw;
   justify-content: space-around;
   animation-name: textReveal;
   animation-duration: 3s;
@@ -293,13 +302,18 @@ body {
     width: 5vw;
     display: block;
   }
+  h3 {
+    margin-bottom: 0px;
+  }
 }
-// #skills1 {
-//   width: 80%;
-//   height: 1vw;
-//   background-color: $secondary-color;
-//   // display: inline;
-// }
+.I1Row3 {
+  img {
+    display: inline;
+  }
+  p {
+    display: inline;
+  }
+}
 .skillParagraph {
   margin-top: 1vw;
 }
@@ -311,7 +325,7 @@ body {
 }
 .skillsForeground {
   height: 1vw;
-  background-color: $secondary-color;
+  background-color: $grey-blue;
   position: absolute;
   top: 0;
   left: 0;
@@ -394,69 +408,37 @@ body {
     height: 0vw;
   }
   100% {
-    height: 35vw;
+    height: 40vw;
   }
-}
-//STYLE OF CASE CONTAINERS --------------------------------------------------------------------------------
-.homeFlexContainer2 {
-  width: 100vw;
-}
-.caseContainer {
-  opacity: 0%;
-  border-radius: 50%;
-  width: 30vw;
-  height: 30vw;
-  background-color: $orange-color;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 5vw;
-  margin: auto;
-  margin-top: 5vw;
-  color: $bone-color;
-  .caseContainerArrow {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: 0%;
-    height: 0vw;
-    p {
-      text-align: center;
-      color: $pink-color;
-      margin: 0px;
-    }
-  }
-}
-.caseContainer:hover {
-  color: $orange-color;
-  border-color: $orange-color;
-  cursor: pointer;
-}
-.caseContainerClicked {
-  transition: 0.5s;
-  background-color: $orange-color;
-  color: $bone-color;
-  cursor: pointer;
-  border: none;
-  .caseContainerTitle {
-    transition: 0.5s;
-    opacity: 100%;
-    color: $orange-color;
-  }
-  .caseContainerArrow {
-    transition: 2s;
-    opacity: 100%;
-    height: 10vw;
-  }
-  .arrowImage {
-    height: 10vw;
-  }
-}
-.caseContainerClicked:hover {
-  color: $bone-color;
 }
 
+//STYLE OF PROJECT CONTAINERS --------------------------------------------------------------------------------
+.I2Content {
+  display: flex;
+  justify-content: space-around;
+  width: 85vw;
+  margin: auto;
+  .projectButton {
+    box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
+      -8px -8px 10px 0 rgb(255, 255, 255);
+    font-size: 1.5vw;
+    font-weight: 300;
+    padding: 2vw;
+    margin: 1vw;
+    width: auto;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $primary-color;
+    p {
+      color: rgba($grey-color, 0.5);
+    }
+  }
+  .projectButton:hover {
+    cursor: pointer;
+  }
+}
 //ARTICLE VISIBILITY --------------------------------------------------------------------------------------
 .caseArticle {
   display: none;
@@ -614,6 +596,7 @@ body {
 }
 //FOOTER --------------------------------------------------------------------------------------------------
 #footer1 {
+  margin-top: 5vw;
   box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15),
     -8px -8px 10px 0 rgb(255, 255, 255);
   background-color: $grey-color;
@@ -675,7 +658,7 @@ body {
 }
 
 #footer2 {
-  background-color: $primary-color;
+  background-color: $grey-blue;
   width: 100vw;
   margin: 0px;
   text-align: center;

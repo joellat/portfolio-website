@@ -99,7 +99,7 @@ header img {
   left: 0.5vw;
   height: 3vw;
   width: 3vw;
-  background-color: #c18277;
+  background-color: #8fa8c2;
   border-radius: 50%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -219,10 +219,6 @@ body {
   cursor: pointer;
 }
 
-.introductionContent:hover p {
-  color: rgba(51, 51, 51, 0.6);
-}
-
 .introductionLine {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -245,6 +241,7 @@ body {
 .IClickedClass p {
   -webkit-transform: scale(0.97);
           transform: scale(0.97);
+  color: rgba(143, 168, 194, 0.6);
 }
 
 .IContent {
@@ -301,6 +298,7 @@ body {
 #I1Content #I1Row1 p.runningText span {
   font-size: 2vw;
   font-weight: 900;
+  color: #097d5a;
 }
 
 #I3Row1 {
@@ -343,7 +341,7 @@ body {
 
 #skillsContainerID {
   display: none;
-  height: 35vw;
+  height: 40vw;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-animation-name: textReveal;
@@ -366,6 +364,18 @@ body {
   display: block;
 }
 
+.I1Row2Class h3 {
+  margin-bottom: 0px;
+}
+
+.I1Row3 img {
+  display: inline;
+}
+
+.I1Row3 p {
+  display: inline;
+}
+
 .skillParagraph {
   margin-top: 1vw;
 }
@@ -379,7 +389,7 @@ body {
 
 .skillsForeground {
   height: 1vw;
-  background-color: #c18277;
+  background-color: #8fa8c2;
   position: absolute;
   top: 0;
   left: 0;
@@ -534,7 +544,7 @@ body {
     height: 0vw;
   }
   100% {
-    height: 35vw;
+    height: 40vw;
   }
 }
 
@@ -543,95 +553,47 @@ body {
     height: 0vw;
   }
   100% {
-    height: 35vw;
+    height: 40vw;
   }
 }
 
-.homeFlexContainer2 {
-  width: 100vw;
-}
-
-.caseContainer {
-  opacity: 0%;
-  border-radius: 50%;
-  width: 30vw;
-  height: 30vw;
-  background-color: #cf5c36;
+.I2Content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 85vw;
+  margin: auto;
+}
+
+.I2Content .projectButton {
+  -webkit-box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -8px -8px 10px 0 white;
+          box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -8px -8px 10px 0 white;
+  font-size: 1.5vw;
+  font-weight: 300;
+  padding: 2vw;
+  margin: 1vw;
+  width: auto;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 5vw;
-  margin: auto;
-  margin-top: 5vw;
-  color: #f9f6ee;
-}
-
-.caseContainer .caseContainerArrow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  opacity: 0%;
-  height: 0vw;
+  color: #009849;
 }
 
-.caseContainer .caseContainerArrow p {
-  text-align: center;
-  color: #ed9298;
-  margin: 0px;
+.I2Content .projectButton p {
+  color: rgba(51, 51, 51, 0.5);
 }
 
-.caseContainer:hover {
-  color: #cf5c36;
-  border-color: #cf5c36;
+.I2Content .projectButton:hover {
   cursor: pointer;
-}
-
-.caseContainerClicked {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  background-color: #cf5c36;
-  color: #f9f6ee;
-  cursor: pointer;
-  border: none;
-}
-
-.caseContainerClicked .caseContainerTitle {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  opacity: 100%;
-  color: #cf5c36;
-}
-
-.caseContainerClicked .caseContainerArrow {
-  -webkit-transition: 2s;
-  transition: 2s;
-  opacity: 100%;
-  height: 10vw;
-}
-
-.caseContainerClicked .arrowImage {
-  height: 10vw;
-}
-
-.caseContainerClicked:hover {
-  color: #f9f6ee;
 }
 
 .caseArticle {
@@ -852,6 +814,7 @@ body {
 }
 
 #footer1 {
+  margin-top: 5vw;
   -webkit-box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -8px -8px 10px 0 white;
           box-shadow: 8px 8px 12px 0 rgba(0, 0, 0, 0.15), -8px -8px 10px 0 white;
   background-color: #333333;
@@ -913,7 +876,7 @@ body {
 }
 
 #footer2 {
-  background-color: #009849;
+  background-color: #8fa8c2;
   width: 100vw;
   margin: 0px;
   text-align: center;
